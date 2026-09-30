@@ -1,0 +1,41 @@
+{
+  "type": "record",
+  "name": "CartItemAdded",
+  "namespace": "com.commercehub.events.cart",
+  "doc": "Schema for CART_ITEM_ADDED event triggered when an item is added to shopping cart",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "cartId",
+      "type": "string"
+    },
+    {
+      "name": "productId",
+      "type": "string"
+    },
+    {
+      "name": "productName",
+      "type": "string"
+    },
+    {
+      "name": "quantity",
+      "type": "int"
+    },
+    {
+      "name": "unitPrice",
+      "type": "double"
+    },
+    {
+      "name": "userId",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "usr-001",
+    "firstName": "Alex",
+    "lastName": "Ionescu",
+    "email": "alex.ionescu@example.com",
+    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+    "roles": ["customer", "admin"],
+    "token": "mock-jwt-token-session-12345"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "type": "record",
+  "name": "OrderCreated",
+  "namespace": "com.commercehub.events.order",
+  "doc": "Schema for ORDER_CREATED event emitted upon successful checkout",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "orderId",
+      "type": "string"
+    },
+    {
+      "name": "orderNumber",
+      "type": "string"
+    },
+    {
+      "name": "userId",
+      "type": "string"
+    },
+    {
+      "name": "total",
+      "type": "double"
+    },
+    {
+      "name": "itemCount",
+      "type": "int"
+    }
+  ]
+}

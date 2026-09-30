@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "ProductViewed",
+  "namespace": "com.commercehub.events.catalog",
+  "doc": "Schema for PRODUCT_VIEWED event emitted when user inspects product details",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": "string"
+    },
+    {
+      "name": "timestamp",
+      "type": "string"
+    },
+    {
+      "name": "productId",
+      "type": "string"
+    },
+    {
+      "name": "productName",
+      "type": "string"
+    },
+    {
+      "name": "categoryId",
+      "type": "string"
+    },
+    {
+      "name": "price",
+      "type": "double"
+    },
+    {
+      "name": "userId",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}
