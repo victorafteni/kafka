@@ -139,7 +139,7 @@ export class MockSearchRepository extends SearchRepository {
           });
         });
 
-        const popularTokens = ['iphone 16 pro', 'samsung s24 ultra', 'pixel 9 pro', 'husa spigen', 'incarcator magsafe', 'airpods pro 2', 'folie sticla'];
+        const popularTokens = ['laptop gaming', 'ultrabook lenovo', 'apple macbook pro', 'headphones anc', '4k monitor'];
         popularTokens.filter(item => item.includes(q) && !suggestions.some(s => s.query.toLowerCase() === item))
           .slice(0, 2)
           .forEach(item => {

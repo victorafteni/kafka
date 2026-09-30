@@ -12,8 +12,6 @@ import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spi
 import { AppEmptyStateComponent } from '../../shared/components/app-empty-state/app-empty-state.component';
 import { AppErrorStateComponent } from '../../shared/components/app-error-state/app-error-state.component';
 
-import { TranslatePipe } from '../../core/i18n/translate.pipe';
-
 @Component({
   selector: 'app-catalog',
   standalone: true,
@@ -25,8 +23,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
     AppPaginationComponent,
     AppSpinnerComponent,
     AppEmptyStateComponent,
-    AppErrorStateComponent,
-    TranslatePipe
+    AppErrorStateComponent
   ],
   template: `
     <div class="catalog-page">
@@ -34,28 +31,28 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
         <div class="catalog-header">
           <div>
             <nav class="breadcrumb">
-              <a routerLink="/">{{ 'NAV.HOME' | translate }}</a>
+              <a routerLink="/">Home</a>
               <span class="sep">/</span>
-              <span class="current">{{ 'NAV.PRODUCTS' | translate }}</span>
+              <span class="current">Products</span>
             </nav>
-            <h1 class="page-title">{{ 'CATALOG.TITLE' | translate }}</h1>
+            <h1 class="page-title">Product Catalog</h1>
             <p class="results-summary">
-              {{ totalProducts() }} {{ 'CATALOG.RESULTS_FOUND' | translate }}
+              Showing {{ totalProducts() }} products
             </p>
           </div>
 
           <div class="header-controls">
             <div class="sort-box">
-              <label for="sortSelect">{{ 'CATALOG.SORT_BY' | translate }}</label>
+              <label for="sortSelect">Sort by:</label>
               <select
                 id="sortSelect"
                 [value]="queryOptions().sortBy || 'featured'"
                 (change)="onSortChange($event)">
-                <option value="featured">{{ 'CATALOG.SORT_FEATURED' | translate }}</option>
-                <option value="price-asc">{{ 'CATALOG.SORT_PRICE_ASC' | translate }}</option>
-                <option value="price-desc">{{ 'CATALOG.SORT_PRICE_DESC' | translate }}</option>
-                <option value="rating-desc">{{ 'CATALOG.SORT_RATING' | translate }}</option>
-                <option value="newest">{{ 'CATALOG.SORT_NEWEST' | translate }}</option>
+                <option value="featured">Featured First</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating-desc">Highest Rated</option>
+                <option value="newest">Newest Arrivals</option>
               </select>
             </div>
 
@@ -64,14 +61,14 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                 type="button"
                 [class.active]="viewMode() === 'grid'"
                 (click)="viewMode.set('grid')"
-                [title]="'CATALOG.VIEW_GRID' | translate">
+                title="Grid View">
                 <span class="material-icons-outlined">grid_view</span>
               </button>
               <button
                 type="button"
                 [class.active]="viewMode() === 'list'"
                 (click)="viewMode.set('list')"
-                [title]="'CATALOG.VIEW_LIST' | translate">
+                title="List View">
                 <span class="material-icons-outlined">view_list</span>
               </button>
             </div>
@@ -92,7 +89,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
           <div class="catalog-content">
             @if (loading()) {
               <div class="loading-state-wrapper">
-                <app-spinner [label]="'COMMON.LOADING' | translate"></app-spinner>
+                <app-spinner label="Fetching products from catalog repository..."></app-spinner>
               </div>
             } @else if (error()) {
               <app-error-state
@@ -101,9 +98,9 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
               </app-error-state>
             } @else if (products().length === 0) {
               <app-empty-state
-                [title]="'CATALOG.NO_PRODUCTS' | translate"
-                [description]="'CATALOG.NO_PRODUCTS_DESC' | translate"
-                [actionLabel]="'COMMON.CLEAR_ALL' | translate"
+                title="No matching products"
+                description="We couldn't find any products matching your filter criteria. Try resetting the filters."
+                actionLabel="Reset Filters"
                 (actionClicked)="onResetFilters()">
               </app-empty-state>
             } @else {

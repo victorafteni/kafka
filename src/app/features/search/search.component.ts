@@ -8,7 +8,6 @@ import { AppProductCardComponent } from '../../shared/components/app-product-car
 import { AppFilterPanelComponent } from '../../shared/components/app-filter-panel/app-filter-panel.component';
 import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spinner.component';
 import { AppEmptyStateComponent } from '../../shared/components/app-empty-state/app-empty-state.component';
-import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-search',
@@ -19,8 +18,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
     AppProductCardComponent,
     AppFilterPanelComponent,
     AppSpinnerComponent,
-    AppEmptyStateComponent,
-    TranslatePipe
+    AppEmptyStateComponent
   ],
   template: `
     <div class="search-page">
@@ -29,13 +27,13 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
           <div class="header-text">
             <h1 class="page-title">
               @if (query()) {
-                {{ 'SEARCH.RESULTS_FOR' | translate }} <span class="highlight">"{{ query() }}"</span>
+                Results for <span class="highlight">"{{ query() }}"</span>
               } @else {
-                {{ 'CATALOG.TITLE' | translate }}
+                All Catalog Products
               }
             </h1>
             <p class="search-meta">
-              <strong>{{ totalHits() }}</strong> {{ 'CATALOG.RESULTS_FOUND' | translate }} in
+              <strong>{{ totalHits() }}</strong> results found in
               <span class="latency-badge">{{ processingTimeMs() }} ms</span>
               (Algolia Engine Simulation)
             </p>
@@ -56,13 +54,13 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
           <div class="results-content">
             @if (loading()) {
               <div class="loading-box">
-                <app-spinner [label]="'COMMON.LOADING' | translate"></app-spinner>
+                <app-spinner label="Executing Algolia faceted query..."></app-spinner>
               </div>
             } @else if (results().length === 0) {
               <app-empty-state
-                [title]="'SEARCH.NO_RESULTS' | translate"
-                [description]="'SEARCH.NO_RESULTS_DESC' | translate"
-                [actionLabel]="'COMMON.CLEAR_ALL' | translate"
+                title="No results found"
+                description="We couldn't find any products matching your query and facet filters."
+                actionLabel="Clear Filters"
                 (actionClicked)="onResetFilters()">
               </app-empty-state>
             } @else {

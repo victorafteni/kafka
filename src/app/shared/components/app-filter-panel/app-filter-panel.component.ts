@@ -2,21 +2,20 @@ import { Component, ChangeDetectionStrategy, input, output } from '@angular/core
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FacetGroup } from '../../models/facet.model';
-import { TranslatePipe } from '../../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-filter-panel',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslatePipe],
+  imports: [CommonModule, FormsModule],
   template: `
     <aside class="filter-panel">
       <div class="panel-header">
         <h3 class="panel-title">
           <span class="material-icons-outlined">tune</span>
-          {{ 'CATALOG.FILTERS' | translate }}
+          Filters
         </h3>
         @if (hasActiveFilters()) {
-          <button class="reset-link" (click)="resetAll.emit()">{{ 'COMMON.CLEAR_ALL' | translate }}</button>
+          <button class="reset-link" (click)="resetAll.emit()">Reset All</button>
         }
       </div>
 

@@ -9,7 +9,6 @@ import { AppPriceComponent } from '../../shared/components/app-price/app-price.c
 import { AppButtonComponent } from '../../shared/components/app-button/app-button.component';
 import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spinner.component';
 import { AppProductCardComponent } from '../../shared/components/app-product-card/app-product-card.component';
-import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-product-detail',
@@ -21,21 +20,20 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
     AppPriceComponent,
     AppButtonComponent,
     AppSpinnerComponent,
-    AppProductCardComponent,
-    TranslatePipe
+    AppProductCardComponent
   ],
   template: `
     <div class="product-detail-page">
       <div class="container">
         @if (loading()) {
           <div class="loading-wrapper">
-            <app-spinner [label]="'COMMON.LOADING' | translate"></app-spinner>
+            <app-spinner label="Fetching product telemetry and specifications..."></app-spinner>
           </div>
         } @else if (product()) {
           <nav class="breadcrumb">
-            <a routerLink="/">{{ 'NAV.HOME' | translate }}</a>
+            <a routerLink="/">Home</a>
             <span class="sep">/</span>
-            <a routerLink="/products">{{ 'NAV.PRODUCTS' | translate }}</a>
+            <a routerLink="/products">Products</a>
             <span class="sep">/</span>
             <span class="current">{{ product()!.name }}</span>
           </nav>
@@ -62,7 +60,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
             <div class="info-col">
               <div class="brand-row">
                 <span class="brand-badge">{{ product()!.brand }}</span>
-                <span class="sku-code">{{ 'PRODUCT.SKU' | translate }}: {{ product()!.sku }}</span>
+                <span class="sku-code">SKU: {{ product()!.sku }}</span>
               </div>
 
               <h1 class="product-title">{{ product()!.name }}</h1>
@@ -73,7 +71,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                   [reviewCount]="product()!.reviewCount"
                   [showScore]="true">
                 </app-rating>
-                <span class="verified-buyer">• {{ product()!.reviewCount }} {{ 'PRODUCT.REVIEWS' | translate }}</span>
+                <span class="verified-buyer">• Verified Purchase Reviews</span>
               </div>
 
               <div class="price-box">
@@ -89,17 +87,17 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                 @if (product()!.stock > 5) {
                   <span class="stock-indicator in-stock">
                     <span class="material-icons-outlined">check_circle</span>
-                    {{ 'COMMON.IN_STOCK' | translate }} ({{ product()!.stock }} {{ 'COMMON.ITEMS' | translate }})
+                    In Stock ({{ product()!.stock }} units available in warehouse)
                   </span>
                 } @else if (product()!.stock > 0) {
                   <span class="stock-indicator low-stock">
                     <span class="material-icons-outlined">warning</span>
-                    {{ 'COMMON.IN_STOCK' | translate }} ({{ product()!.stock }})
+                    Hurry! Only {{ product()!.stock }} left in stock
                   </span>
                 } @else {
                   <span class="stock-indicator out-stock">
                     <span class="material-icons-outlined">cancel</span>
-                    {{ 'COMMON.OUT_OF_STOCK' | translate }}
+                    Temporarily Out of Stock
                   </span>
                 }
               </div>
@@ -129,7 +127,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                   icon="shopping_cart"
                   [disabled]="product()!.stock === 0"
                   (clicked)="onAddToCart()">
-                  {{ 'PRODUCT.ADD_TO_CART' | translate }}
+                  Add to Cart
                 </app-button>
               </div>
 
@@ -137,15 +135,15 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                 <div class="perk-item">
                   <span class="material-icons-outlined">local_shipping</span>
                   <div>
-                    <strong>{{ 'HOME.BENEFITS_SHIPPING_TITLE' | translate }}</strong>
-                    <p>{{ 'PRODUCT.SHIPPING_NOTE' | translate }}</p>
+                    <strong>Express Shipping Available</strong>
+                    <p>Free standard delivery on orders above €1,000</p>
                   </div>
                 </div>
                 <div class="perk-item">
                   <span class="material-icons-outlined">verified_user</span>
                   <div>
-                    <strong>{{ 'HOME.BENEFITS_WARRANTY_TITLE' | translate }}</strong>
-                    <p>{{ 'PRODUCT.WARRANTY_NOTE' | translate }}</p>
+                    <strong>2-Year Warranty Included</strong>
+                    <p>Official manufacturer warranty & 30-day money back</p>
                   </div>
                 </div>
               </div>
@@ -158,19 +156,19 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                 class="tab-btn"
                 [class.active]="activeTab() === 'specs'"
                 (click)="activeTab.set('specs')">
-                {{ 'PRODUCT.SPECS' | translate }}
+                Technical Specifications
               </button>
               <button
                 class="tab-btn"
                 [class.active]="activeTab() === 'desc'"
                 (click)="activeTab.set('desc')">
-                {{ 'PRODUCT.DESCRIPTION' | translate }}
+                Full Description
               </button>
               <button
                 class="tab-btn"
                 [class.active]="activeTab() === 'reviews'"
                 (click)="activeTab.set('reviews')">
-                {{ 'PRODUCT.REVIEWS_TAB' | translate }} ({{ product()!.reviewCount }})
+                Customer Reviews ({{ product()!.reviewCount }})
               </button>
             </div>
 
@@ -188,7 +186,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                 <div class="description-body">
                   <p>{{ product()!.description }}</p>
                   <p>
-                    Construit cu materiale premium din titan, sticlă de safir și silicon biocompatibil, oferind compatibilitate deplină cu accesoriile oficiale de încărcare și protecție.
+                    Engineered to meet stringent commercial demands, featuring optimized thermal architecture, enterprise-grade components, and future-proof connectivity interfaces.
                   </p>
                 </div>
               } @else {
@@ -196,11 +194,11 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                   <div class="review-card">
                     <div class="review-top">
                       <strong>Mihai D.</strong>
-                      <span class="review-date">2 săptămâni în urmă</span>
+                      <span class="review-date">2 weeks ago</span>
                     </div>
                     <app-rating [rating]="5" [showCount]="false"></app-rating>
                     <p class="review-text">
-                      Smartphone de excepție! Ecranul este extrem de luminos, iar autonomia bateriei cu încărcătorul rapid GaN este impresionantă. Livrat în mai puțin de 24h.
+                      Outstanding build quality and blazingly fast delivery. Runs quiet under heavy workloads. Highly recommended!
                     </p>
                   </div>
                 </div>
@@ -210,7 +208,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
           @if (relatedProducts().length > 0) {
             <div class="related-section">
-              <h2 class="related-title">{{ 'PRODUCT.RELATED_PRODUCTS' | translate }}</h2>
+              <h2 class="related-title">Related Products in {{ product()!.categoryName }}</h2>
               <div class="related-grid">
                 @for (rel of relatedProducts(); track rel.id) {
                   <app-product-card

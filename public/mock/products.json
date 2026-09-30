@@ -1,464 +1,284 @@
 [
   {
     "id": "prod-101",
-    "sku": "APL-IP16PM-256",
-    "name": "Apple iPhone 16 Pro Max 256GB Desert Titanium",
-    "description": "Design revoluționar din titan grad 5, cip A18 Pro, buton dedicat Camera Control, ecran Super Retina XDR OLED de 6.9 inch și autonomie extinsă.",
-    "categoryId": "cat-phones",
-    "categoryName": "Telefoane Mobile",
-    "brand": "Apple",
-    "price": 1479.00,
-    "originalPrice": 1599.00,
-    "currency": "EUR",
-    "stock": 18,
-    "rating": 4.9,
-    "reviewCount": 242,
-    "images": [
-      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Ecran", "value": "6.9\" Super Retina XDR OLED 120Hz" },
-      { "name": "Procesor", "value": "Apple A18 Pro (3nm)" },
-      { "name": "Memorie internă", "value": "256 GB NVMe" },
-      { "name": "Cameră foto", "value": "Triplă 48MP + 48MP Ultra-Wide + 12MP Periscop 5x" },
-      { "name": "Baterie & Încărcare", "value": "Încărcare rapidă USB-C 3.0 & MagSafe 25W" }
-    ],
-    "featured": true,
-    "popular": true,
-    "createdAt": "2024-09-15T10:00:00Z",
-    "updatedAt": "2024-09-20T12:00:00Z"
-  },
-  {
-    "id": "prod-102",
-    "sku": "SAM-S24U-512-TI",
-    "name": "Samsung Galaxy S24 Ultra 512GB Titanium Black",
-    "description": "Putere absolută cu Galaxy AI, carcasă din titan, stilou S-Pen integrat, cameră de 200 MP și procesor Snapdragon 8 Gen 3 optimizat pentru Galaxy.",
-    "categoryId": "cat-phones",
-    "categoryName": "Telefoane Mobile",
-    "brand": "Samsung",
-    "price": 1399.00,
-    "originalPrice": 1499.00,
+    "sku": "LEN-TP-X1-G11",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 11",
+    "description": "Ultralight business laptop powered by 13th Gen Intel Core i7, 14-inch 2.8K OLED display, and military-grade durability.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
+    "brand": "Lenovo",
+    "price": 1499.00,
+    "originalPrice": 1699.00,
     "currency": "EUR",
     "stock": 14,
     "rating": 4.8,
-    "reviewCount": 189,
+    "reviewCount": 128,
     "images": [
-      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&auto=format&fit=crop&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&auto=format&fit=crop&q=80",
     "attributes": [
-      { "name": "Ecran", "value": "6.8\" Dynamic AMOLED 2X QHD+ 120Hz" },
-      { "name": "Procesor", "value": "Snapdragon 8 Gen 3 for Galaxy" },
-      { "name": "RAM & Stocare", "value": "12 GB RAM / 512 GB UFS 4.0" },
-      { "name": "Cameră principală", "value": "200 MP OIS + 50MP Zoom 5x + 10MP Zoom 3x + 12MP Ultra-Wide" },
-      { "name": "Baterie", "value": "5000 mAh cu încărcare rapidă 45W" }
+      { "name": "Processor", "value": "Intel Core i7-1365U" },
+      { "name": "RAM", "value": "32 GB" },
+      { "name": "Storage", "value": "1 TB SSD" },
+      { "name": "Screen Size", "value": "14 inch OLED" }
     ],
     "featured": true,
     "popular": true,
-    "createdAt": "2024-01-25T11:00:00Z",
-    "updatedAt": "2024-03-01T09:30:00Z"
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-03-01T12:00:00Z"
+  },
+  {
+    "id": "prod-102",
+    "sku": "DEL-XPS-15-9530",
+    "name": "Dell XPS 15 9530",
+    "description": "High performance creator laptop with NVIDIA GeForce RTX 4060, Intel Core i9, and InfinityEdge 3.5K OLED touchscreen.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
+    "brand": "Dell",
+    "price": 2199.00,
+    "originalPrice": 2399.00,
+    "currency": "EUR",
+    "stock": 8,
+    "rating": 4.7,
+    "reviewCount": 94,
+    "images": [
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Processor", "value": "Intel Core i9-13900H" },
+      { "name": "RAM", "value": "32 GB" },
+      { "name": "Storage", "value": "1 TB SSD" },
+      { "name": "Graphics", "value": "RTX 4060 8GB" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2024-01-20T11:00:00Z",
+    "updatedAt": "2024-02-14T09:30:00Z"
   },
   {
     "id": "prod-103",
-    "sku": "GOOG-PX9P-XL-256",
-    "name": "Google Pixel 9 Pro XL 256GB Porcelain",
-    "description": "Cea mai avansată experiență Google Tensor G4 cu Gemini AI integrat nativ, ecran Super Actua de 6.8\" și cel mai apreciat sistem foto de smartphone.",
-    "categoryId": "cat-phones",
-    "categoryName": "Telefoane Mobile",
-    "brand": "Google",
-    "price": 1199.00,
-    "originalPrice": 1299.00,
-    "currency": "EUR",
-    "stock": 11,
-    "rating": 4.8,
-    "reviewCount": 115,
-    "images": [
-      "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02544?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Ecran", "value": "6.8\" LTPO OLED Super Actua 1-120Hz" },
-      { "name": "Procesor", "value": "Google Tensor G4 cu Coprocesor Titan M2" },
-      { "name": "RAM & Stocare", "value": "16 GB RAM / 256 GB Stocare" },
-      { "name": "Fotografie", "value": "50MP Wide + 48MP Ultrawide + 48MP Telefoto 5x" },
-      { "name": "Suport Software", "value": "7 ani de actualizări OS & securitate" }
-    ],
-    "featured": true,
-    "popular": false,
-    "createdAt": "2024-08-20T10:00:00Z",
-    "updatedAt": "2024-09-01T08:00:00Z"
-  },
-  {
-    "id": "prod-104",
-    "sku": "XIA-14U-512-LEICA",
-    "name": "Xiaomi 14 Ultra 512GB Leica Quad-Camera",
-    "description": "Smartphone de fotografie profesională conceput în parteneriat cu Leica. Senzor de 1 inch cu diafragmă variabilă continuă și corp ceramic premium.",
-    "categoryId": "cat-phones",
-    "categoryName": "Telefoane Mobile",
-    "brand": "Xiaomi",
-    "price": 1249.00,
-    "originalPrice": 1399.00,
-    "currency": "EUR",
-    "stock": 7,
-    "rating": 4.7,
-    "reviewCount": 78,
-    "images": [
-      "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Ecran", "value": "6.73\" AMOLED WQHD+ 120Hz 3000 nits" },
-      { "name": "Optică", "value": "Leica Summilux Quad Camera 50MP + 50MP + 50MP + 50MP" },
-      { "name": "Procesor", "value": "Qualcomm Snapdragon 8 Gen 3" },
-      { "name": "Încărcare", "value": "HyperCharge 90W pe fir / 80W Wireless" }
-    ],
-    "featured": false,
-    "popular": true,
-    "createdAt": "2024-02-15T09:00:00Z",
-    "updatedAt": "2024-02-28T14:00:00Z"
-  },
-  {
-    "id": "prod-105",
-    "sku": "OP-12-512-GRN",
-    "name": "OnePlus 12 512GB Emerald Green",
-    "description": "Smooth Beyond Belief. Echipat cu a 4-a generație de camere Hasselblad pentru telefoane mobile, răcire Dual Cryo-velocity VC și ecran 2K ProXDR.",
-    "categoryId": "cat-phones",
-    "categoryName": "Telefoane Mobile",
-    "brand": "OnePlus",
-    "price": 899.00,
-    "originalPrice": 999.00,
-    "currency": "EUR",
-    "stock": 16,
-    "rating": 4.8,
-    "reviewCount": 112,
-    "images": [
-      "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Ecran", "value": "6.82\" 2K 120Hz ProXDR Display cu LTPO" },
-      { "name": "Memorie", "value": "16 GB LPDDR5X RAM + 512 GB UFS 4.0" },
-      { "name": "Baterie", "value": "5400 mAh cu 100W SUPERVOOC" }
-    ],
-    "featured": false,
-    "popular": true,
-    "createdAt": "2024-01-10T12:00:00Z",
-    "updatedAt": "2024-02-10T10:00:00Z"
-  },
-  {
-    "id": "prod-106",
-    "sku": "APL-CASE-16PM-SIL",
-    "name": "Husă Apple Silicone Case cu MagSafe pentru iPhone 16 Pro Max",
-    "description": "Concepută de Apple special pentru iPhone 16 Pro Max, finisaj catifelat din silicon plăcut la atingere, căptușeală moale din microfibră și aliniere magnetică perfectă.",
-    "categoryId": "cat-cases",
-    "categoryName": "Huse & Carcase",
+    "sku": "APP-MBP-14-M3",
+    "name": "Apple MacBook Pro 14 (M3 Pro)",
+    "description": "Groundbreaking Apple silicon M3 Pro with 18-core GPU, Liquid Retina XDR display, and up to 18 hours of battery life.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
     "brand": "Apple",
-    "price": 59.00,
-    "originalPrice": 65.00,
+    "price": 2499.00,
     "currency": "EUR",
-    "stock": 45,
-    "rating": 4.6,
-    "reviewCount": 167,
-    "images": [
-      "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Compatibilitate", "value": "Apple iPhone 16 Pro Max" },
-      { "name": "Material", "value": "Silicon lichid premium + microfibră" },
-      { "name": "Tehnologie", "value": "MagSafe integrat cu magneți N52" },
-      { "name": "Culoare", "value": "Midnight Blue" }
-    ],
-    "featured": true,
-    "popular": true,
-    "createdAt": "2024-09-15T12:00:00Z",
-    "updatedAt": "2024-09-22T08:00:00Z"
-  },
-  {
-    "id": "prod-107",
-    "sku": "SPG-TA-S24U-BLK",
-    "name": "Husă Spigen Tough Armor MagFit pentru Samsung Galaxy S24 Ultra",
-    "description": "Protecție extremă cu certificare militară MIL-STD 810G-516.6. Spumă cu tehnologie de absorbție a șocurilor Air Cushion, stand kickstand integrat și inel MagSafe.",
-    "categoryId": "cat-cases",
-    "categoryName": "Huse & Carcase",
-    "brand": "Spigen",
-    "price": 38.00,
-    "originalPrice": 45.00,
-    "currency": "EUR",
-    "stock": 35,
-    "rating": 4.9,
-    "reviewCount": 310,
-    "images": [
-      "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Compatibilitate", "value": "Samsung Galaxy S24 Ultra" },
-      { "name": "Protecție", "value": "Dual Layer (TPU flexibil + Policarbonat rigid)" },
-      { "name": "Funcții", "value": "Kickstand retractabil pentru vizionare video" }
-    ],
-    "featured": false,
-    "popular": true,
-    "createdAt": "2024-01-20T10:00:00Z",
-    "updatedAt": "2024-02-15T11:00:00Z"
-  },
-  {
-    "id": "prod-108",
-    "sku": "SPG-GLAS-IP16-2PK",
-    "name": "Pachet 2x Folie Sticlă Securizată Spigen GlasTR EZ FIT 9H",
-    "description": "Kit de aplicare inovator cu aliniere automată instantanee. Duritate 9H, acoperire oleofobă anti-amprentă și claritate HD absolută a ecranului.",
-    "categoryId": "cat-protectors",
-    "categoryName": "Folii de Protecție",
-    "brand": "Spigen",
-    "price": 24.99,
-    "originalPrice": 29.99,
-    "currency": "EUR",
-    "stock": 60,
-    "rating": 4.9,
-    "reviewCount": 420,
-    "images": [
-      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Cantitate pachet", "value": "2 bucăți folie sticlă 9H" },
-      { "name": "Instalare", "value": "Tăviță automată EZ FIT fără bule de aer" },
-      { "name": "Tratament", "value": "Strat oleofobic electroplacat" }
-    ],
-    "featured": false,
-    "popular": true,
-    "createdAt": "2024-09-12T08:00:00Z",
-    "updatedAt": "2024-09-20T10:00:00Z"
-  },
-  {
-    "id": "prod-109",
-    "sku": "ANK-PRIME-67W-GAN",
-    "name": "Încărcător Rapid Anker Prime 67W GaN USB-C 3-Porturi",
-    "description": "Putere compactă GaNPrime™ de 67W capabilă să încarce simultan la viteză maximă două telefoane mobile și un accesoriu sau laptop. Tehnologie ActiveShield™ 2.0.",
-    "categoryId": "cat-chargers",
-    "categoryName": "Încărcătoare & Cabluri",
-    "brand": "Anker",
-    "price": 54.99,
-    "originalPrice": 69.99,
-    "currency": "EUR",
-    "stock": 28,
+    "stock": 19,
     "rating": 4.9,
     "reviewCount": 215,
     "images": [
-      "https://images.unsplash.com/photo-1622445268048-52219d3f11d1?w=800&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&auto=format&fit=crop&q=80"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1622445268048-52219d3f11d1?w=400&auto=format&fit=crop&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&auto=format&fit=crop&q=80",
     "attributes": [
-      { "name": "Putere Totală", "value": "67W GaN PowerIQ 4.0" },
-      { "name": "Porturi", "value": "2x USB-C + 1x USB-A" },
-      { "name": "Protecție termică", "value": "3.000.000 monitorizări temperatură pe zi" }
+      { "name": "Processor", "value": "Apple M3 Pro (12-core)" },
+      { "name": "RAM", "value": "18 GB Unified" },
+      { "name": "Storage", "value": "512 GB SSD" },
+      { "name": "Screen Size", "value": "14.2 inch Liquid Retina XDR" }
     ],
     "featured": true,
     "popular": true,
-    "createdAt": "2024-03-01T08:00:00Z",
-    "updatedAt": "2024-03-10T12:00:00Z"
+    "createdAt": "2023-11-10T08:00:00Z",
+    "updatedAt": "2024-03-05T14:15:00Z"
   },
   {
-    "id": "prod-110",
-    "sku": "APL-MAGSAFE-15W",
-    "name": "Încărcător Magnetic Wireless Apple MagSafe 15W Cablu 2m",
-    "description": "Încărcătorul MagSafe original oferă o încărcare wireless rapidă și comodă prin aliniere magnetică perfectă pentru toate modelele iPhone compatibile Qi2.",
-    "categoryId": "cat-chargers",
-    "categoryName": "Încărcătoare & Cabluri",
-    "brand": "Apple",
-    "price": 49.00,
-    "originalPrice": 55.00,
+    "id": "prod-104",
+    "sku": "HP-PB-450-G10",
+    "name": "HP ProBook 450 G10",
+    "description": "Essential commercial performance with Intel Core i5, long-lasting battery, and HP Wolf Security for Business.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
+    "brand": "HP",
+    "price": 849.00,
+    "originalPrice": 929.00,
     "currency": "EUR",
-    "stock": 40,
-    "rating": 4.7,
-    "reviewCount": 180,
+    "stock": 25,
+    "rating": 4.3,
+    "reviewCount": 47,
     "images": [
-      "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=800&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=400&auto=format&fit=crop&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&auto=format&fit=crop&q=80",
     "attributes": [
-      { "name": "Putere încărcare", "value": "Până la 25W (cu adaptor de 30W recomandat)" },
-      { "name": "Lungime cablu", "value": "2 metri împletit textil rezistent" },
-      { "name": "Conexiune", "value": "USB Type-C" }
+      { "name": "Processor", "value": "Intel Core i5-1335U" },
+      { "name": "RAM", "value": "16 GB" },
+      { "name": "Storage", "value": "512 GB SSD" }
     ],
     "featured": false,
     "popular": true,
-    "createdAt": "2024-09-15T09:00:00Z",
-    "updatedAt": "2024-09-20T10:00:00Z"
-  },
-  {
-    "id": "prod-111",
-    "sku": "APL-APP2-USBC",
-    "name": "Căști Wireless Apple AirPods Pro 2 USB-C cu ANC",
-    "description": "Cip H2 performant, anulare activă a zgomotului de până la 2x mai eficientă, mod Transparență Adaptivă, Audio Spațial personalizat și carcasă MagSafe USB-C.",
-    "categoryId": "cat-audio",
-    "categoryName": "Căști Wireless & Audio",
-    "brand": "Apple",
-    "price": 249.00,
-    "originalPrice": 279.00,
-    "currency": "EUR",
-    "stock": 25,
-    "rating": 4.9,
-    "reviewCount": 380,
-    "images": [
-      "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Autonomie", "value": "6 ore cască / 30 ore cu carcasa MagSafe" },
-      { "name": "Rezistență", "value": "IP54 rezistență la praf, transpirație și apă" },
-      { "name": "Conectivitate", "value": "Bluetooth 5.3 + Cip U1 / U2 pentru căutare precisă" }
-    ],
-    "featured": true,
-    "popular": true,
-    "createdAt": "2024-01-05T10:00:00Z",
+    "createdAt": "2024-01-05T09:00:00Z",
     "updatedAt": "2024-02-18T16:00:00Z"
   },
   {
-    "id": "prod-112",
-    "sku": "SAM-BUDS3P-SIL",
-    "name": "Căști In-Ear Samsung Galaxy Buds 3 Pro Hi-Res ANC",
-    "description": "Design blade aerodinamic cu lumini LED interactive Blade Lights, difuzoare pe 2 căi cu amplificator dublu, sunet 24-bit/96kHz și Galaxy AI Interpreter în timp real.",
-    "categoryId": "cat-audio",
-    "categoryName": "Căști Wireless & Audio",
-    "brand": "Samsung",
-    "price": 199.00,
-    "originalPrice": 229.00,
-    "currency": "EUR",
-    "stock": 19,
-    "rating": 4.7,
-    "reviewCount": 98,
-    "images": [
-      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Codec Audio", "value": "Samsung Seamless Codec (SSC) 24-bit 96kHz" },
-      { "name": "Anulare Zgomot", "value": "Adaptive ANC cu recunoaștere sirenă / voce" },
-      { "name": "Baterie", "value": "Până la 30 ore ascultare totală" }
-    ],
-    "featured": false,
-    "popular": true,
-    "createdAt": "2024-07-20T11:00:00Z",
-    "updatedAt": "2024-08-10T14:00:00Z"
-  },
-  {
-    "id": "prod-113",
-    "sku": "ANK-MAGGO-10K-QI2",
-    "name": "Baterie Externă Magnetică Anker MagGo Qi2 10000mAh 15W",
-    "description": "Certificată Qi2 pentru încărcare wireless magnetică ultra-rapidă de 15W. Ecran digital inteligent care indică procentul exact al bateriei și timpul rămas până la reîncărcare.",
-    "categoryId": "cat-powerbanks",
-    "categoryName": "Baterii Externe MagSafe",
-    "brand": "Anker",
-    "price": 69.99,
-    "originalPrice": 89.99,
+    "id": "prod-201",
+    "sku": "APP-IPH-15-PRO",
+    "name": "Apple iPhone 15 Pro Max 256GB",
+    "description": "Forged in aerospace-grade titanium, with revolutionary A17 Pro chip, customizable Action button, and 5x Telephoto camera.",
+    "categoryId": "cat-phones",
+    "categoryName": "Smartphones & Tablets",
+    "brand": "Apple",
+    "price": 1399.00,
     "currency": "EUR",
     "stock": 22,
     "rating": 4.9,
-    "reviewCount": 145,
+    "reviewCount": 340,
     "images": [
-      "https://images.unsplash.com/photo-1609592426861-f3b3924f3ce5?w=800&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&auto=format&fit=crop&q=80"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1609592426861-f3b3924f3ce5?w=400&auto=format&fit=crop&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&auto=format&fit=crop&q=80",
     "attributes": [
-      { "name": "Capacitate", "value": "10.000 mAh (reîncarcă un iPhone de ~2 ori)" },
-      { "name": "Viteză wireless", "value": "15W Magnetic Wireless Qi2" },
-      { "name": "Ieșire USB-C", "value": "27W Power Delivery bidirecțional" }
+      { "name": "Display", "value": "6.7 inch Super Retina XDR" },
+      { "name": "Storage", "value": "256 GB" },
+      { "name": "Camera", "value": "48MP Main + 12MP Ultra-Wide + 12MP 5x Telephoto" }
     ],
     "featured": true,
     "popular": true,
-    "createdAt": "2024-04-10T10:00:00Z",
-    "updatedAt": "2024-05-01T12:00:00Z"
+    "createdAt": "2023-09-22T08:00:00Z",
+    "updatedAt": "2024-03-02T10:00:00Z"
   },
   {
-    "id": "prod-114",
-    "sku": "BLK-MNT-QI2-15W",
-    "name": "Suport Auto Magnetic Belkin BoostCharge MagSafe Qi2 15W",
-    "description": "Fixare sigură pe grila de ventilație a mașinii cu braț articulat rotativ 360°, prindere magnetică fermă chiar și pe drumuri accidentate și încărcare wireless 15W.",
-    "categoryId": "cat-mounts",
-    "categoryName": "Suporturi Auto & Birou",
-    "brand": "Belkin",
-    "price": 59.99,
-    "originalPrice": 69.99,
-    "currency": "EUR",
-    "stock": 30,
-    "rating": 4.8,
-    "reviewCount": 120,
-    "images": [
-      "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Montare", "value": "Grilă ventilație auto cu clemă securizată" },
-      { "name": "Rotire", "value": "Orientare portrait / landscape facilă" },
-      { "name": "Putere", "value": "15W încărcare wireless rapidă inclusă" }
-    ],
-    "featured": false,
-    "popular": true,
-    "createdAt": "2024-03-15T11:00:00Z",
-    "updatedAt": "2024-04-05T09:00:00Z"
-  },
-  {
-    "id": "prod-115",
-    "sku": "APL-WATCH-U2-49TI",
-    "name": "Smartwatch Apple Watch Ultra 2 GPS + Cellular 49mm Titanium",
-    "description": "Cel mai rezistent și capabil Apple Watch realizat din titan aerospațial. Ecran luminos de 3000 de nits, GPS de mare precizie cu frecvență dublă și autonomie de până la 72 ore.",
-    "categoryId": "cat-smartwatch",
-    "categoryName": "Smartwatch-uri",
-    "brand": "Apple",
-    "price": 869.00,
-    "originalPrice": 899.00,
-    "currency": "EUR",
-    "stock": 9,
-    "rating": 4.9,
-    "reviewCount": 164,
-    "images": [
-      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=80"
-    ],
-    "thumbnail": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=400&auto=format&fit=crop&q=80",
-    "attributes": [
-      { "name": "Carcasă", "value": "Titan 49mm cu sticlă din cristal de safir" },
-      { "name": "Conectivitate", "value": "eSIM 4G LTE + GPS Dual-Frequency L1 & L5" },
-      { "name": "Senzori", "value": "EKG, Oxigen sânge SpO2, Senzor adâncime apă 40m" }
-    ],
-    "featured": true,
-    "popular": true,
-    "createdAt": "2024-09-18T10:00:00Z",
-    "updatedAt": "2024-09-25T14:00:00Z"
-  },
-  {
-    "id": "prod-116",
-    "sku": "SAM-GW6C-47-BT",
-    "name": "Smartwatch Samsung Galaxy Watch 6 Classic 47mm Bluetooth",
-    "description": "Revenirea inconfundabilei rame rotative fizice. Urmărire avansată a compoziției corporale BIA, monitorizare detaliată a somnului și ecran generos Super AMOLED.",
-    "categoryId": "cat-smartwatch",
-    "categoryName": "Smartwatch-uri",
+    "id": "prod-202",
+    "sku": "SAM-S24-ULTRA",
+    "name": "Samsung Galaxy S24 Ultra 512GB",
+    "description": "Welcome to the era of mobile AI with Galaxy AI, titanium frame, 200MP camera system, and built-in S Pen.",
+    "categoryId": "cat-phones",
+    "categoryName": "Smartphones & Tablets",
     "brand": "Samsung",
-    "price": 299.00,
+    "price": 1449.00,
+    "originalPrice": 1569.00,
+    "currency": "EUR",
+    "stock": 16,
+    "rating": 4.8,
+    "reviewCount": 182,
+    "images": [
+      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Display", "value": "6.8 inch QHD+ Dynamic AMOLED 2X" },
+      { "name": "RAM", "value": "12 GB" },
+      { "name": "Storage", "value": "512 GB" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2024-01-30T10:00:00Z",
+    "updatedAt": "2024-03-01T15:00:00Z"
+  },
+  {
+    "id": "prod-301",
+    "sku": "SNY-WH-1000XM5",
+    "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+    "description": "Industry-leading noise cancelation with two processors and eight microphones, exceptional sound quality with LDAC.",
+    "categoryId": "cat-audio",
+    "categoryName": "Audio & Headphones",
+    "brand": "Sony",
+    "price": 349.00,
     "originalPrice": 399.00,
     "currency": "EUR",
-    "stock": 15,
+    "stock": 31,
     "rating": 4.7,
-    "reviewCount": 130,
+    "reviewCount": 420,
     "images": [
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80"
     ],
-    "thumbnail": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&auto=format&fit=crop&q=80",
+    "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop&q=80",
     "attributes": [
-      { "name": "Control", "value": "Ramă rotativă fizică mecanică" },
-      { "name": "Ecran", "value": "1.5\" Super AMOLED Sapphire Crystal" },
-      { "name": "Sănătate", "value": "Compoziție corporală, EKG, Tensiune arterială" }
+      { "name": "Battery Life", "value": "30 Hours" },
+      { "name": "Noise Cancellation", "value": "Active Noise Canceling (ANC)" },
+      { "name": "Connectivity", "value": "Bluetooth 5.2 / 3.5mm" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2023-08-14T09:00:00Z",
+    "updatedAt": "2024-02-20T11:00:00Z"
+  },
+  {
+    "id": "prod-302",
+    "sku": "APP-AIR-PODS-MAX",
+    "name": "Apple AirPods Max — Space Gray",
+    "description": "High-fidelity audio with computational sound, active noise cancellation with Transparency mode, and knit-mesh canopy.",
+    "categoryId": "cat-audio",
+    "categoryName": "Audio & Headphones",
+    "brand": "Apple",
+    "price": 579.00,
+    "currency": "EUR",
+    "stock": 9,
+    "rating": 4.6,
+    "reviewCount": 160,
+    "images": [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Chip", "value": "Dual Apple H1 Headphone Chip" },
+      { "name": "Battery Life", "value": "20 Hours" }
     ],
     "featured": false,
     "popular": true,
-    "createdAt": "2024-02-01T09:00:00Z",
-    "updatedAt": "2024-02-20T12:00:00Z"
+    "createdAt": "2023-07-10T12:00:00Z",
+    "updatedAt": "2024-01-18T10:00:00Z"
+  },
+  {
+    "id": "prod-401",
+    "sku": "LG-OLED-65-C3",
+    "name": "LG OLED evo C3 65-Inch 4K Smart TV",
+    "description": "Self-lit OLED pixels with α9 AI Processor Gen6, 120Hz refresh rate, Dolby Vision IQ & Dolby Atmos, perfect for gaming and movies.",
+    "categoryId": "cat-tv",
+    "categoryName": "TV & Home Cinema",
+    "brand": "LG",
+    "price": 1699.00,
+    "originalPrice": 1999.00,
+    "currency": "EUR",
+    "stock": 5,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "images": [
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Screen Size", "value": "65 Inch" },
+      { "name": "Resolution", "value": "4K Ultra HD (3840 x 2160)" },
+      { "name": "Refresh Rate", "value": "120Hz VRR" }
+    ],
+    "featured": true,
+    "popular": false,
+    "createdAt": "2023-10-01T10:00:00Z",
+    "updatedAt": "2024-02-12T14:00:00Z"
+  },
+  {
+    "id": "prod-501",
+    "sku": "DEL-MON-U2723QE",
+    "name": "Dell UltraSharp 27 4K USB-C Hub Monitor (U2723QE)",
+    "description": "Brilliant 4K monitor featuring IPS Black technology with 2000:1 contrast ratio and comprehensive connectivity hub with 90W power delivery.",
+    "categoryId": "cat-accessories",
+    "categoryName": "Accessories & Peripherals",
+    "brand": "Dell",
+    "price": 589.00,
+    "currency": "EUR",
+    "stock": 18,
+    "rating": 4.8,
+    "reviewCount": 115,
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Panel Type", "value": "IPS Black" },
+      { "name": "Resolution", "value": "3840 x 2160 at 60Hz" },
+      { "name": "Power Delivery", "value": "90W USB-C" }
+    ],
+    "featured": false,
+    "popular": true,
+    "createdAt": "2023-11-20T11:00:00Z",
+    "updatedAt": "2024-01-25T09:00:00Z"
   }
 ]
+

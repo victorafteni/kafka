@@ -6,23 +6,22 @@ import { CartFacade } from '../cart/cart.facade';
 import { OrderService } from '../../core/services/order.service';
 import { EventBusService } from '../../core/event-bus/event-bus.service';
 import { AppButtonComponent } from '../../shared/components/app-button/app-button.component';
-import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, AppButtonComponent, TranslatePipe],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, AppButtonComponent],
   template: `
     <div class="checkout-page">
       <div class="container">
-        <h1 class="page-title">{{ 'CHECKOUT.TITLE' | translate }}</h1>
-        <p class="subtitle">{{ 'CHECKOUT.SHIPPING_INFO' | translate }}</p>
+        <h1 class="page-title">Secure Checkout</h1>
+        <p class="subtitle">Complete your shipping and payment information</p>
 
         @if (items().length === 0) {
           <div class="empty-checkout">
-            <p>{{ 'CART.EMPTY_DESC' | translate }}</p>
+            <p>Your shopping cart is empty. Please add items before checking out.</p>
             <a routerLink="/products">
-              <app-button variant="primary">{{ 'CART.START_SHOPPING' | translate }}</app-button>
+              <app-button variant="primary">Return to Catalog</app-button>
             </a>
           </div>
         } @else {
@@ -31,46 +30,46 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
               <div class="form-section">
                 <h3 class="section-title">
                   <span class="material-icons-outlined">local_shipping</span>
-                  {{ 'CHECKOUT.SHIPPING_INFO' | translate }}
+                  Shipping Address
                 </h3>
 
                 <div class="form-row">
                   <div class="form-group full-width">
-                    <label for="fullName">{{ 'CHECKOUT.FULL_NAME' | translate }}</label>
+                    <label for="fullName">Full Name</label>
                     <input id="fullName" type="text" formControlName="fullName" placeholder="Alex Ionescu" />
                   </div>
                 </div>
 
                 <div class="form-row">
                   <div class="form-group full-width">
-                    <label for="street">{{ 'CHECKOUT.ADDRESS' | translate }}</label>
+                    <label for="street">Street Address</label>
                     <input id="street" type="text" formControlName="street" placeholder="Bd. Dimitrie Pompeiu 10A" />
                   </div>
                 </div>
 
                 <div class="form-row two-cols">
                   <div class="form-group">
-                    <label for="city">{{ 'CHECKOUT.CITY' | translate }}</label>
-                    <input id="city" type="text" formControlName="city" placeholder="București" />
+                    <label for="city">City</label>
+                    <input id="city" type="text" formControlName="city" placeholder="Bucharest" />
                   </div>
                   <div class="form-group">
-                    <label for="postalCode">{{ 'CHECKOUT.POSTAL_CODE' | translate }}</label>
+                    <label for="postalCode">Postal Code</label>
                     <input id="postalCode" type="text" formControlName="postalCode" placeholder="020337" />
                   </div>
                 </div>
 
                 <div class="form-row two-cols">
                   <div class="form-group">
-                    <label for="country">Țară / Country</label>
+                    <label for="country">Country</label>
                     <select id="country" formControlName="country">
-                      <option value="Romania">România</option>
-                      <option value="Germany">Germania</option>
-                      <option value="France">Franța</option>
-                      <option value="United Kingdom">Marea Britanie</option>
+                      <option value="Romania">Romania</option>
+                      <option value="Germany">Germany</option>
+                      <option value="France">France</option>
+                      <option value="United Kingdom">United Kingdom</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="phone">{{ 'CHECKOUT.PHONE' | translate }}</label>
+                    <label for="phone">Phone Number</label>
                     <input id="phone" type="tel" formControlName="phone" placeholder="+40 722 000 111" />
                   </div>
                 </div>
@@ -79,19 +78,24 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
               <div class="form-section">
                 <h3 class="section-title">
                   <span class="material-icons-outlined">payment</span>
-                  {{ 'CHECKOUT.PAYMENT_METHOD' | translate }}
+                  Payment Method
                 </h3>
 
                 <div class="payment-options">
                   <label class="pay-option">
                     <input type="radio" formControlName="paymentMethod" value="card" />
                     <span class="material-icons-outlined">credit_card</span>
-                    <span>{{ 'CHECKOUT.CARD' | translate }}</span>
+                    <span>Credit / Debit Card (Stripe simulation)</span>
+                  </label>
+                  <label class="pay-option">
+                    <input type="radio" formControlName="paymentMethod" value="apple-pay" />
+                    <span class="material-icons-outlined">phone_iphone</span>
+                    <span>Apple Pay / Google Pay</span>
                   </label>
                   <label class="pay-option">
                     <input type="radio" formControlName="paymentMethod" value="cash-on-delivery" />
                     <span class="material-icons-outlined">local_atm</span>
-                    <span>{{ 'CHECKOUT.CASH_ON_DELIVERY' | translate }}</span>
+                    <span>Cash on Delivery</span>
                   </label>
                 </div>
               </div>
@@ -99,7 +103,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
             <div class="review-col">
               <div class="review-card">
-                <h3 class="review-title">{{ 'CHECKOUT.ORDER_SUMMARY' | translate }} ({{ items().length }} {{ 'COMMON.ITEMS' | translate }})</h3>
+                <h3 class="review-title">Order Review ({{ items().length }} items)</h3>
 
                 <div class="review-items">
                   @for (item of items(); track item.productId) {
@@ -107,7 +111,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                       <img [src]="item.image" [alt]="item.productName" class="item-thumb" />
                       <div class="item-info">
                         <span class="item-name">{{ item.productName }}</span>
-                        <span class="item-qty">{{ 'PRODUCT.QUANTITY' | translate }}: {{ item.quantity }}</span>
+                        <span class="item-qty">Qty: {{ item.quantity }}</span>
                       </div>
                       <span class="item-price">€{{ item.totalPrice.toFixed(2) }}</span>
                     </div>
@@ -116,22 +120,22 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
                 <div class="totals-breakdown">
                   <div class="total-line">
-                    <span>{{ 'CART.SUBTOTAL' | translate }}</span>
+                    <span>Subtotal</span>
                     <span>€{{ subtotal().toFixed(2) }}</span>
                   </div>
                   <div class="total-line">
-                    <span>{{ 'CART.SHIPPING' | translate }}</span>
-                    <span>{{ shipping() === 0 ? ('CART.SHIPPING_FREE' | translate) : ('€' + shipping().toFixed(2)) }}</span>
+                    <span>Shipping</span>
+                    <span>{{ shipping() === 0 ? 'FREE' : ('€' + shipping().toFixed(2)) }}</span>
                   </div>
                   @if (discount() > 0) {
                     <div class="total-line discount">
-                      <span>{{ 'CART.DISCOUNT' | translate }}</span>
+                      <span>Enterprise Discount</span>
                       <span>-€{{ discount().toFixed(2) }}</span>
                     </div>
                   }
                   <div class="divider"></div>
                   <div class="total-line grand">
-                    <span>{{ 'CART.TOTAL' | translate }}</span>
+                    <span>Order Total</span>
                     <span>€{{ total().toFixed(2) }}</span>
                   </div>
                 </div>
@@ -143,7 +147,7 @@ import { TranslatePipe } from '../../core/i18n/translate.pipe';
                   [fullWidth]="true"
                   [loading]="submitting()"
                   [disabled]="checkoutForm.invalid">
-                  {{ 'CHECKOUT.PLACE_ORDER' | translate }}
+                  Place Order & Stream Event
                 </app-button>
               </div>
             </div>

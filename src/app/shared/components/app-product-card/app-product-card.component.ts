@@ -6,7 +6,6 @@ import { AppRatingComponent } from '../app-rating/app-rating.component';
 import { AppPriceComponent } from '../app-price/app-price.component';
 import { AppButtonComponent } from '../app-button/app-button.component';
 import { AppBadgeComponent } from '../app-badge/app-badge.component';
-import { TranslatePipe } from '../../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-product-card',
@@ -17,8 +16,7 @@ import { TranslatePipe } from '../../../core/i18n/translate.pipe';
     AppRatingComponent,
     AppPriceComponent,
     AppButtonComponent,
-    AppBadgeComponent,
-    TranslatePipe
+    AppBadgeComponent
   ],
   template: `
     <div class="product-card" [class.list-mode]="viewMode() === 'list'">
@@ -31,11 +29,11 @@ import { TranslatePipe } from '../../../core/i18n/translate.pipe';
         />
         <div class="badges-top">
           @if (product().stock <= 5 && product().stock > 0) {
-            <app-badge variant="warning">{{ product().stock }} {{ 'COMMON.ITEMS' | translate }}</app-badge>
+            <app-badge variant="warning">Only {{ product().stock }} left</app-badge>
           } @else if (product().stock === 0) {
-            <app-badge variant="danger">{{ 'COMMON.OUT_OF_STOCK' | translate }}</app-badge>
+            <app-badge variant="danger">Out of stock</app-badge>
           } @else if (product().featured) {
-            <app-badge variant="accent">{{ 'CATALOG.SORT_FEATURED' | translate }}</app-badge>
+            <app-badge variant="accent">Featured</app-badge>
           }
         </div>
       </div>
@@ -72,7 +70,7 @@ import { TranslatePipe } from '../../../core/i18n/translate.pipe';
             icon="add_shopping_cart"
             [disabled]="product().stock === 0"
             (clicked)="onAddToCart($event)">
-            {{ 'PRODUCT.ADD_TO_CART' | translate }}
+            Add to Cart
           </app-button>
         </div>
       </div>
