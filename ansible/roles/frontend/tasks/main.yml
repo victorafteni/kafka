@@ -1,0 +1,25 @@
+---
+- name: Pull latest Docker image
+  community.docker.docker_image:
+    name: "{{ docker_image }}"
+    source: pull
+    force_source: yes
+
+- name: Stop and remove existing container
+  community.docker.docker_container:
+    name: "{{ app_name }}"
+    state: absent
+
+- name: Run new Commerce Hub SPA container
+  community.docker.docker_container:
+    name: "{{ app_name }}"
+    image: "{{ docker_image }}"
+    state: started
+    restart_policy: always
+    ports:
+      - "{{ host_port }}:{{ container_port }}"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3

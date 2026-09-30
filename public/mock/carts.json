@@ -1,0 +1,36 @@
+[
+  {
+    "id": "cart-001",
+    "userId": "usr-001",
+    "items": [
+      {
+        "productId": "prod-101",
+        "productSku": "LEN-TP-X1-G11",
+        "productName": "Lenovo ThinkPad X1 Carbon Gen 11",
+        "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&auto=format&fit=crop&q=80",
+        "brand": "Lenovo",
+        "quantity": 1,
+        "unitPrice": 1499.00,
+        "totalPrice": 1499.00,
+        "availableStock": 14
+      },
+      {
+        "productId": "prod-501",
+        "productSku": "DEL-MON-U2723QE",
+        "productName": "Dell UltraSharp 27 4K USB-C Hub Monitor (U2723QE)",
+        "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&auto=format&fit=crop&q=80",
+        "brand": "Dell",
+        "quantity": 2,
+        "unitPrice": 589.00,
+        "totalPrice": 1178.00,
+        "availableStock": 18
+      }
+    ],
+    "subtotal": 2677.00,
+    "discount": 0.00,
+    "shipping": 20.00,
+    "total": 2697.00,
+    "currency": "EUR",
+    "updatedAt": "2024-03-01T12:30:00Z"
+  }
+]

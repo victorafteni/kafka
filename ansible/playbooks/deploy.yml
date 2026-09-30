@@ -1,0 +1,12 @@
+---
+- name: Deploy Commerce Hub SPA
+  hosts: production
+  become: yes
+  vars:
+    app_name: commerce-hub-spa
+    docker_image: "commerce-hub-spa:latest"
+    container_port: 80
+    host_port: 80
+
+  roles:
+    - frontend
