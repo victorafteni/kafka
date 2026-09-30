@@ -17,21 +17,21 @@ export class OrderService {
       userId: 'usr-001',
       items: [
         {
-          productId: 'prod-103',
-          productSku: 'APP-MBP-14-M3',
-          productName: 'Apple MacBook Pro 14 (M3 Pro)',
-          image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&auto=format&fit=crop&q=80',
+          productId: 'prod-101',
+          productSku: 'APL-IP16PM-256',
+          productName: 'Apple iPhone 16 Pro Max 256GB Desert Titanium',
+          image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&auto=format&fit=crop&q=80',
           brand: 'Apple',
           quantity: 1,
-          unitPrice: 2499.00,
-          totalPrice: 2499.00,
-          availableStock: 19
+          unitPrice: 1479.00,
+          totalPrice: 1479.00,
+          availableStock: 18
         }
       ],
-      subtotal: 2499.00,
+      subtotal: 1479.00,
       shipping: 0,
-      discount: 100.00,
-      total: 2399.00,
+      discount: 0,
+      total: 1479.00,
       currency: 'EUR',
       status: 'shipped',
       shippingAddress: {

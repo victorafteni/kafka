@@ -26,6 +26,8 @@ $gray-600: #475569;
 $gray-700: #334155;
 $gray-800: #1e293b;
 $gray-900: #0f172a;
+$dark: #0f172a;
+$dark-surface: #1e293b;
 
 // Semantic
 $success: #10b981;
@@ -50,6 +52,7 @@ $radius-xs: 4px;
 $radius-sm: 6px;
 $radius-md: 10px;
 $radius-lg: 16px;
+$radius-xl: 20px;
 $radius-full: 9999px;
 
 // Elevation / Shadows
@@ -62,6 +65,7 @@ $shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23,
 // Transitions
 $transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 $transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 $transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
 // Breakpoints

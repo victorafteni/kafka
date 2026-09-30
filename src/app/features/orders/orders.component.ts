@@ -4,25 +4,26 @@ import { RouterModule } from '@angular/router';
 import { OrderService } from '../../core/services/order.service';
 import { AppBadgeComponent } from '../../shared/components/app-badge/app-badge.component';
 import { AppEmptyStateComponent } from '../../shared/components/app-empty-state/app-empty-state.component';
+import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-orders',
   standalone: true,
-  imports: [CommonModule, RouterModule, AppBadgeComponent, AppEmptyStateComponent],
+  imports: [CommonModule, RouterModule, AppBadgeComponent, AppEmptyStateComponent, TranslatePipe],
   template: `
     <div class="orders-page">
       <div class="container">
         <div class="orders-header">
-          <h1 class="page-title">My Orders</h1>
-          <p class="subtitle">History of dispatched orders and real-time Kafka event traces</p>
+          <h1 class="page-title">{{ 'ORDERS.TITLE' | translate }}</h1>
+          <p class="subtitle">{{ 'ORDERS.SUBTITLE' | translate }}</p>
         </div>
 
         @if (orders().length === 0) {
           <app-empty-state
             icon="receipt_long"
-            title="No orders placed yet"
-            description="When you purchase items from Commerce Hub, your order details and delivery status will appear here."
-            actionLabel="Start Shopping"
+            [title]="'ORDERS.NO_ORDERS' | translate"
+            [description]="'ORDERS.NO_ORDERS_DESC' | translate"
+            [actionLabel]="'CART.START_SHOPPING' | translate"
             [routerLink]="['/products']">
           </app-empty-state>
         } @else {
@@ -31,8 +32,8 @@ import { AppEmptyStateComponent } from '../../shared/components/app-empty-state/
               <div class="order-card">
                 <div class="order-card-header">
                   <div class="header-left">
-                    <span class="order-num">{{ order.orderNumber }}</span>
-                    <span class="order-date">Placed on {{ order.createdAt | date:'mediumDate' }}</span>
+                    <span class="order-num">{{ 'ORDERS.ORDER_NUMBER' | translate }} {{ order.orderNumber }}</span>
+                    <span class="order-date">{{ order.createdAt | date:'mediumDate' }}</span>
                   </div>
 
                   <div class="header-right">

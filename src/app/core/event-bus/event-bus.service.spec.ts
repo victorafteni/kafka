@@ -48,9 +48,9 @@ describe('EventBusService', () => {
 
     service.emit('PRODUCT_VIEWED', {
       productId: 'prod-102',
-      productName: 'Dell XPS 15',
-      categoryId: 'cat-laptops',
-      price: 2199
+      productName: 'Samsung Galaxy S24 Ultra 512GB Titanium Black',
+      categoryId: 'cat-phones',
+      price: 1399
     });
   });
 });

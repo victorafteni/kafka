@@ -5,6 +5,7 @@ import { CartFacade } from './cart.facade';
 import { AppButtonComponent } from '../../shared/components/app-button/app-button.component';
 import { AppEmptyStateComponent } from '../../shared/components/app-empty-state/app-empty-state.component';
 import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spinner.component';
+import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-cart',
@@ -14,35 +15,36 @@ import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spi
     RouterModule,
     AppButtonComponent,
     AppEmptyStateComponent,
-    AppSpinnerComponent
+    AppSpinnerComponent,
+    TranslatePipe
   ],
   template: `
     <div class="cart-page">
       <div class="container">
         <div class="cart-header">
           <div>
-            <h1 class="page-title">Shopping Cart</h1>
+            <h1 class="page-title">{{ 'CART.TITLE' | translate }}</h1>
             <p class="cart-subtitle">
-              Session-backed state managed via Redis key-value simulation
+              {{ 'CART.REDIS_NOTE' | translate }}
             </p>
           </div>
           @if (items().length > 0) {
             <app-button variant="ghost" size="sm" icon="delete_sweep" (clicked)="clearCart()">
-              Clear Cart
+              {{ 'CART.CLEAR_CART' | translate }}
             </app-button>
           }
         </div>
 
         @if (loading()) {
           <div class="loading-box">
-            <app-spinner label="Synchronizing cart with Redis session store..."></app-spinner>
+            <app-spinner [label]="'COMMON.LOADING' | translate"></app-spinner>
           </div>
         } @else if (items().length === 0) {
           <app-empty-state
             icon="shopping_cart"
-            title="Your cart is empty"
-            description="Explore our catalog to find enterprise computing hardware, smartphones, and accessories."
-            actionLabel="Start Shopping"
+            [title]="'CART.EMPTY_TITLE' | translate"
+            [description]="'CART.EMPTY_DESC' | translate"
+            [actionLabel]="'CART.START_SHOPPING' | translate"
             [routerLink]="['/products']">
           </app-empty-state>
         } @else {
@@ -93,15 +95,15 @@ import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spi
                         type="button"
                         class="remove-btn"
                         (click)="removeItem(item.productId)"
-                        title="Remove product">
+                        [title]="'CART.REMOVE_ITEM' | translate">
                         <span class="material-icons-outlined">delete_outline</span>
-                        <span>Remove</span>
+                        <span>{{ 'CART.REMOVE_ITEM' | translate }}</span>
                       </button>
                     </div>
                   </div>
 
                   <div class="item-total-col">
-                    <span class="total-label">Total</span>
+                    <span class="total-label">{{ 'CART.TOTAL' | translate }}</span>
                     <span class="item-total-price">€{{ item.totalPrice.toFixed(2) }}</span>
                   </div>
                 </div>
@@ -110,22 +112,22 @@ import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spi
 
             <div class="summary-col">
               <div class="summary-card">
-                <h3 class="summary-title">Order Summary</h3>
+                <h3 class="summary-title">{{ 'CHECKOUT.ORDER_SUMMARY' | translate }}</h3>
 
                 <div class="summary-rows">
                   <div class="summary-row">
-                    <span>Subtotal</span>
+                    <span>{{ 'CART.SUBTOTAL' | translate }}</span>
                     <span>€{{ subtotal().toFixed(2) }}</span>
                   </div>
 
                   <div class="summary-row">
-                    <span>Estimated Shipping</span>
-                    <span>{{ shipping() === 0 ? 'FREE' : ('€' + shipping().toFixed(2)) }}</span>
+                    <span>{{ 'CART.SHIPPING' | translate }}</span>
+                    <span>{{ shipping() === 0 ? ('CART.SHIPPING_FREE' | translate) : ('€' + shipping().toFixed(2)) }}</span>
                   </div>
 
                   @if (discount() > 0) {
                     <div class="summary-row discount-row">
-                      <span>Enterprise Discount</span>
+                      <span>{{ 'CART.DISCOUNT' | translate }}</span>
                       <span>-€{{ discount().toFixed(2) }}</span>
                     </div>
                   }
@@ -133,7 +135,7 @@ import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spi
                   <div class="summary-divider"></div>
 
                   <div class="summary-row total-row">
-                    <span>Total</span>
+                    <span>{{ 'CART.TOTAL' | translate }}</span>
                     <span class="grand-total">€{{ total().toFixed(2) }}</span>
                   </div>
                 </div>
@@ -141,21 +143,21 @@ import { AppSpinnerComponent } from '../../shared/components/app-spinner/app-spi
                 <div class="checkout-actions">
                   <a routerLink="/checkout" class="checkout-link">
                     <app-button variant="primary" size="lg" [fullWidth]="true" icon="lock">
-                      Proceed to Checkout
+                      {{ 'CART.PROCEED_CHECKOUT' | translate }}
                     </app-button>
                   </a>
                   <a routerLink="/products" class="continue-link">
-                    Continue Shopping
+                    {{ 'COMMON.BACK' | translate }}
                   </a>
                 </div>
 
                 <div class="redis-badge-box">
                   <div class="redis-status-line">
                     <span class="material-icons-outlined">memory</span>
-                    <strong>Redis Session Store Simulation</strong>
+                    <strong>Redis Session Store</strong>
                   </div>
                   <p>
-                    Cart state is updated through <code>CartService → CartRepository → MockCartRepository</code> with transactional lock and stock verification semantics.
+                    {{ 'CART.REDIS_NOTE' | translate }}
                   </p>
                 </div>
               </div>

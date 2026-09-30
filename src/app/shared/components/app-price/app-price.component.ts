@@ -83,3 +83,4 @@ export class AppPriceComponent {
     return Math.round(((this.originalPrice()! - this.price()) / this.originalPrice()!) * 100);
   });
 }
+

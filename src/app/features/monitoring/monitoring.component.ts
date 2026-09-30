@@ -3,28 +3,29 @@ import { CommonModule } from '@angular/common';
 import { TelemetryService } from '../../core/services/telemetry.service';
 import { MockKafkaProducer } from '../../core/event-bus/mock-kafka.producer';
 import { AppBadgeComponent } from '../../shared/components/app-badge/app-badge.component';
+import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-monitoring',
   standalone: true,
-  imports: [CommonModule, AppBadgeComponent],
+  imports: [CommonModule, AppBadgeComponent, TranslatePipe],
   template: `
     <div class="monitoring-page">
       <div class="container">
         <div class="dash-header">
           <div>
             <div class="badge-row">
-              <app-badge variant="accent" [dot]="true">Real-Time Telemetry & Kafka Stream</app-badge>
+              <app-badge variant="accent" [dot]="true">{{ 'MONITORING.TITLE' | translate }}</app-badge>
             </div>
-            <h1 class="page-title">Frontend Operations & Kafka Observability</h1>
+            <h1 class="page-title">{{ 'MONITORING.TITLE' | translate }}</h1>
             <p class="subtitle">
-              Live operational awareness for event bus emissions, latency profiling, and distributed tracing.
+              {{ 'MONITORING.SUBTITLE' | translate }}
             </p>
           </div>
           <div class="header-actions">
             <span class="pulse-indicator">
               <span class="live-dot"></span>
-              Live Pipeline Connected
+              {{ 'MONITORING.LIVE_AUDIT' | translate }}
             </span>
           </div>
         </div>

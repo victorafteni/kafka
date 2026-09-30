@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { Subject, debounceTime, distinctUntilChanged, switchMap, of } from 'rxjs';
 import { SearchRepository } from '../../../core/repositories/search.repository';
 import { SearchSuggestion } from '../../models/facet.model';
+import { TranslatePipe } from '../../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-search-box',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslatePipe],
   template: `
     <div class="search-box-wrapper" [class.open]="showDropdown() && suggestions().length > 0">
       <div class="input-container">
@@ -17,7 +18,7 @@ import { SearchSuggestion } from '../../models/facet.model';
           #inputEl
           type="text"
           class="search-input"
-          [placeholder]="placeholder()"
+          [placeholder]="placeholder() || ('NAV.SEARCH_PLACEHOLDER' | translate)"
           [(ngModel)]="searchQuery"
           (ngModelChange)="onInputChange($event)"
           (focus)="onInputFocus()"
@@ -35,8 +36,8 @@ import { SearchSuggestion } from '../../models/facet.model';
       @if (showDropdown() && suggestions().length > 0) {
         <div class="suggestions-dropdown">
           <div class="dropdown-header">
-            <span>Suggestions</span>
-            <span class="powered-by">Powered by Algolia Engine</span>
+            <span>{{ 'SEARCH.SUGGESTIONS' | translate }}</span>
+            <span class="powered-by">Algolia Engine</span>
           </div>
 
           <div class="suggestions-list">

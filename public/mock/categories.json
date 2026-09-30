@@ -1,38 +1,58 @@
 [
   {
-    "id": "cat-laptops",
-    "name": "Laptops & Computers",
-    "slug": "laptops",
-    "icon": "laptop_mac",
-    "productCount": 12
-  },
-  {
     "id": "cat-phones",
-    "name": "Smartphones & Tablets",
-    "slug": "phones",
+    "name": "Telefoane Mobile",
+    "slug": "telefoane-mobile",
     "icon": "smartphone",
-    "productCount": 10
-  },
-  {
-    "id": "cat-audio",
-    "name": "Audio & Headphones",
-    "slug": "audio",
-    "icon": "headphones",
-    "productCount": 8
-  },
-  {
-    "id": "cat-tv",
-    "name": "TV & Home Cinema",
-    "slug": "tv",
-    "icon": "tv",
     "productCount": 6
   },
   {
-    "id": "cat-accessories",
-    "name": "Accessories & Peripherals",
-    "slug": "accessories",
-    "icon": "keyboard",
-    "productCount": 9
+    "id": "cat-cases",
+    "name": "Huse & Carcase",
+    "slug": "huse-carcase",
+    "icon": "shield",
+    "productCount": 4
+  },
+  {
+    "id": "cat-protectors",
+    "name": "Folii de Protecție",
+    "slug": "folii-protectie",
+    "icon": "layers",
+    "productCount": 2
+  },
+  {
+    "id": "cat-chargers",
+    "name": "Încărcătoare & Cabluri",
+    "slug": "incarcatoare-cabluri",
+    "icon": "bolt",
+    "productCount": 4
+  },
+  {
+    "id": "cat-audio",
+    "name": "Căști Wireless & Audio",
+    "slug": "casti-audio",
+    "icon": "headphones",
+    "productCount": 3
+  },
+  {
+    "id": "cat-powerbanks",
+    "name": "Baterii Externe MagSafe",
+    "slug": "baterii-externe",
+    "icon": "battery_charging_full",
+    "productCount": 2
+  },
+  {
+    "id": "cat-mounts",
+    "name": "Suporturi Auto & Birou",
+    "slug": "suporturi-auto",
+    "icon": "directions_car",
+    "productCount": 2
+  },
+  {
+    "id": "cat-smartwatch",
+    "name": "Smartwatch-uri",
+    "slug": "smartwatch",
+    "icon": "watch",
+    "productCount": 2
   }
 ]
-

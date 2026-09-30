@@ -5,33 +5,32 @@
     "items": [
       {
         "productId": "prod-101",
-        "productSku": "LEN-TP-X1-G11",
-        "productName": "Lenovo ThinkPad X1 Carbon Gen 11",
-        "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&auto=format&fit=crop&q=80",
-        "brand": "Lenovo",
+        "productSku": "APL-IP16PM-256",
+        "productName": "Apple iPhone 16 Pro Max 256GB Desert Titanium",
+        "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&auto=format&fit=crop&q=80",
+        "brand": "Apple",
         "quantity": 1,
-        "unitPrice": 1499.00,
-        "totalPrice": 1499.00,
-        "availableStock": 14
+        "unitPrice": 1479.00,
+        "totalPrice": 1479.00,
+        "availableStock": 18
       },
       {
-        "productId": "prod-501",
-        "productSku": "DEL-MON-U2723QE",
-        "productName": "Dell UltraSharp 27 4K USB-C Hub Monitor (U2723QE)",
-        "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&auto=format&fit=crop&q=80",
-        "brand": "Dell",
-        "quantity": 2,
-        "unitPrice": 589.00,
-        "totalPrice": 1178.00,
-        "availableStock": 18
+        "productId": "prod-106",
+        "productSku": "APL-CASE-16PM-SIL",
+        "productName": "Husă Apple Silicone Case cu MagSafe pentru iPhone 16 Pro Max",
+        "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&auto=format&fit=crop&q=80",
+        "brand": "Apple",
+        "quantity": 1,
+        "unitPrice": 59.00,
+        "totalPrice": 59.00,
+        "availableStock": 45
       }
     ],
-    "subtotal": 2677.00,
+    "subtotal": 1538.00,
     "discount": 0.00,
-    "shipping": 20.00,
-    "total": 2697.00,
+    "shipping": 0.00,
+    "total": 1538.00,
     "currency": "EUR",
-    "updatedAt": "2024-03-01T12:30:00Z"
+    "updatedAt": "2024-09-20T12:30:00Z"
   }
 ]
-
