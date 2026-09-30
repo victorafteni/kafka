@@ -80,3 +80,4 @@ export class AppEmptyStateComponent {
 
   actionClicked = output<void>();
 }
+

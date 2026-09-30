@@ -72,3 +72,4 @@ export class AppErrorStateComponent {
 
   retry = output<void>();
 }
+

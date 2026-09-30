@@ -148,3 +148,4 @@ export class AppButtonComponent {
 
   clicked = output<MouseEvent>();
 }
+

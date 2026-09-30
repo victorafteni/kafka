@@ -186,3 +186,4 @@ export class SearchComponent implements OnInit {
     this.cartFacade.addToCart(product, 1);
   }
 }
+

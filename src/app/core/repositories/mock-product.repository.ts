@@ -133,3 +133,4 @@ export class MockProductRepository extends ProductRepository {
     );
   }
 }
+

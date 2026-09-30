@@ -221,3 +221,4 @@ export class AppProductCardComponent {
     this.addToCart.emit(this.product());
   }
 }
+

@@ -6,3 +6,4 @@ export interface Category {
   productCount?: number;
   parentId?: string;
 }
+

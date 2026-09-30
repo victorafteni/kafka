@@ -42,3 +42,4 @@ export class CatalogFacade {
     this.catalogService.setCategory(categoryId);
   }
 }
+

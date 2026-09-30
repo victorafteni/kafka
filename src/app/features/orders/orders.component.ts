@@ -267,3 +267,4 @@ export class OrdersComponent {
   private orderService = inject(OrderService);
   readonly orders = this.orderService.orders;
 }
+

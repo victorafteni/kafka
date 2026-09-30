@@ -29,3 +29,4 @@ export class SearchFacade {
     this.searchService.resetFilters();
   }
 }
+

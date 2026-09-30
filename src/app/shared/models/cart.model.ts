@@ -24,3 +24,4 @@ export interface Cart {
   currency: string;
   updatedAt: string;
 }
+

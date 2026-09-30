@@ -7,3 +7,4 @@ export abstract class SearchRepository {
   abstract getSuggestions(query: string): Observable<SearchSuggestion[]>;
   abstract getFacets(): Observable<FacetGroup[]>;
 }
+

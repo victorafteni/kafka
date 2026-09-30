@@ -55,3 +55,4 @@ export class AppSpinnerComponent {
   label = input<string>('Loading...');
   inline = input<boolean>(false);
 }
+

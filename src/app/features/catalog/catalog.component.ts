@@ -343,3 +343,4 @@ export class CatalogComponent implements OnInit {
     this.catalogFacade.loadProducts();
   }
 }
+

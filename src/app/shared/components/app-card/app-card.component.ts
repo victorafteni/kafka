@@ -37,3 +37,4 @@ export class AppCardComponent {
   hoverable = input<boolean>(true);
   bordered = input<boolean>(true);
 }
+

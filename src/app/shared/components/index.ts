@@ -10,3 +10,4 @@ export * from './app-pagination/app-pagination.component';
 export * from './app-search-box/app-search-box.component';
 export * from './app-product-card/app-product-card.component';
 export * from './app-filter-panel/app-filter-panel.component';
+

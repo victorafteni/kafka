@@ -56,3 +56,4 @@ export interface OrderCreatedPayload {
   total: number;
   itemCount: number;
 }
+

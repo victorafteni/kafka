@@ -163,3 +163,4 @@ export class CatalogService {
     this.loadProducts({ categoryId, page: 1 });
   }
 }
+

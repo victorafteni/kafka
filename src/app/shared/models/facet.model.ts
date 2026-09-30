@@ -27,3 +27,4 @@ export interface SearchResult<T> {
   processingTimeMs: number;
   query: string;
 }
+

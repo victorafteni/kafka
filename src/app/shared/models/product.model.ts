@@ -53,3 +53,4 @@ export interface PagedResult<T> {
   pageSize: number;
   totalPages: number;
 }
+

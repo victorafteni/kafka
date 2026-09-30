@@ -473,3 +473,4 @@ export class MonitoringComponent {
     return JSON.stringify(event, null, 2);
   }
 }
+

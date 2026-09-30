@@ -79,3 +79,4 @@ export class AppBadgeComponent {
   variant = input<BadgeVariant>('primary');
   dot = input<boolean>(false);
 }
+

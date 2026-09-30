@@ -8,3 +8,4 @@ export abstract class CartRepository {
   abstract removeItem(userId: string, productId: string): Observable<Cart>;
   abstract clearCart(userId: string): Observable<Cart>;
 }
+

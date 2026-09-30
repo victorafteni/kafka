@@ -517,3 +517,4 @@ export class CartComponent {
     this.cartFacade.clearCart();
   }
 }
+

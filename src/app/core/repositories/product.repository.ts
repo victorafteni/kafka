@@ -10,3 +10,4 @@ export abstract class ProductRepository {
   abstract getPopularProducts(): Observable<Product[]>;
   abstract getRelatedProducts(productId: string, categoryId: string): Observable<Product[]>;
 }
+

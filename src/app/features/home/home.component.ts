@@ -429,3 +429,4 @@ export class HomeComponent {
     this.cartFacade.addToCart(product, 1);
   }
 }
+

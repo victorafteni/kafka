@@ -103,3 +103,4 @@ export class SearchService {
     this.search(this.state().query, {});
   }
 }
+
