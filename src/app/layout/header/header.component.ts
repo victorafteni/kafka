@@ -6,11 +6,12 @@ import { AuthService } from '../../core/auth/auth.service';
 import { TranslationService, SupportedLang } from '../../core/i18n/translation.service';
 import { TranslatePipe } from '../../core/i18n/translate.pipe';
 import { AppSearchBoxComponent } from '../../shared/components/app-search-box/app-search-box.component';
+import { AppFlagComponent } from '../../shared/components/app-flag/app-flag.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, AppSearchBoxComponent, TranslatePipe],
+  imports: [CommonModule, RouterModule, AppSearchBoxComponent, TranslatePipe, AppFlagComponent],
   template: `
     <header class="app-header">
       <div class="top-banner">
@@ -34,21 +35,7 @@ import { AppSearchBoxComponent } from '../../shared/components/app-search-box/ap
                   (click)="setLanguage(lang.code)"
                   [title]="lang.label"
                 >
-                  @if (lang.code === 'ro') {
-                    <svg class="flag-icon" viewBox="0 0 640 480" width="18" height="13" aria-hidden="true">
-                      <rect width="213.3" height="480" fill="#002B7F"/>
-                      <rect x="213.3" width="213.4" height="480" fill="#FCD116"/>
-                      <rect x="426.7" width="213.3" height="480" fill="#CE1126"/>
-                    </svg>
-                  } @else if (lang.code === 'en') {
-                    <svg class="flag-icon" viewBox="0 0 640 480" width="18" height="13" aria-hidden="true">
-                      <path fill="#012169" d="M0 0h640v480H0z"/>
-                      <path fill="#FFF" d="m75 0 245 180L565 0h75v60L435 240l205 150v90h-75L320 300 75 480H0v-60l205-150L0 120V0h75z"/>
-                      <path fill="#C8102E" d="m425 285 215 155v40L395 300l30-15zm-210-90L0 40V0l245 180-30 15zm270-195h75L320 210l-30-20L520 0h-35zm-400 480H45L285 300l30 20L120 480h-35z"/>
-                      <path fill="#FFF" d="M260 0h120v480H260zM0 180h640v120H0z"/>
-                      <path fill="#C8102E" d="M280 0h80v480H280zM0 200h640v80H0z"/>
-                    </svg>
-                  }
+                  <app-flag [lang]="lang.code"></app-flag>
                   <span class="code">{{ lang.code | uppercase }}</span>
                 </button>
               }
@@ -204,17 +191,6 @@ import { AppSearchBoxComponent } from '../../shared/components/app-search-box/ap
             background: $primary-600;
             border-color: rgba(255, 255, 255, 0.2);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-          }
-
-          .flag-icon {
-            width: 17px;
-            height: 12px;
-            border-radius: 2px;
-            display: inline-block;
-            vertical-align: middle;
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            flex-shrink: 0;
           }
 
           .code {
