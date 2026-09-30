@@ -34,24 +34,21 @@ import { AppSearchBoxComponent } from '../../shared/components/app-search-box/ap
                   (click)="setLanguage(lang.code)"
                   [title]="lang.label"
                 >
-                  <span class="flag-icon" aria-hidden="true">
-                    @if (lang.code === 'ro') {
-                      <!-- Romania Emoji Flag (Twemoji 🇷🇴) -->
-                      <svg class="flag-emoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-                        <path fill="#002B7F" d="M4 5C1.791 5 0 6.791 0 9v18c0 2.209 1.791 4 4 4h8V5H4z"/>
-                        <path fill="#FCD116" d="M12 5h12v26H12z"/>
-                        <path fill="#CE1126" d="M32 5h-8v26h8c2.209 0 4-1.791 4-4V9c0-2.209-1.791-4-4-4z"/>
-                      </svg>
-                    } @else {
-                      <!-- Great Britain / UK Emoji Flag (Twemoji 🇬🇧) -->
-                      <svg class="flag-emoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-                        <path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/>
-                        <path fill="#CF1B2B" d="M25.14 23l9.712 6.801c.471-.479.808-1.082.99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8c-.521-.53-1.188-.909-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2C.677 6.68.34 7.282.157 7.949L7.372 13h3.487z"/>
-                        <path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32c1.117 0 2.126-.461 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9c0-1.091-.439-2.078-1.148-2.8L25.141 13H23v-.943l9.915-6.942C32.62 5.046 32.316 5 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4c-1.118 0-2.126.461-2.852 1.2l9.711 6.8H7.372L.157 7.949C.065 8.286 0 8.634 0 9v.059L5.628 13H0v2h15V5h-2z"/>
-                        <path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/>
-                      </svg>
-                    }
-                  </span>
+                  @if (lang.code === 'ro') {
+                    <svg class="flag-icon" viewBox="0 0 640 480" width="18" height="13" aria-hidden="true">
+                      <rect width="213.3" height="480" fill="#002B7F"/>
+                      <rect x="213.3" width="213.4" height="480" fill="#FCD116"/>
+                      <rect x="426.7" width="213.3" height="480" fill="#CE1126"/>
+                    </svg>
+                  } @else if (lang.code === 'en') {
+                    <svg class="flag-icon" viewBox="0 0 640 480" width="18" height="13" aria-hidden="true">
+                      <path fill="#012169" d="M0 0h640v480H0z"/>
+                      <path fill="#FFF" d="m75 0 245 180L565 0h75v60L435 240l205 150v90h-75L320 300 75 480H0v-60l205-150L0 120V0h75z"/>
+                      <path fill="#C8102E" d="m425 285 215 155v40L395 300l30-15zm-210-90L0 40V0l245 180-30 15zm270-195h75L320 210l-30-20L520 0h-35zm-400 480H45L285 300l30 20L120 480h-35z"/>
+                      <path fill="#FFF" d="M260 0h120v480H260zM0 180h640v120H0z"/>
+                      <path fill="#C8102E" d="M280 0h80v480H280zM0 200h640v80H0z"/>
+                    </svg>
+                  }
                   <span class="code">{{ lang.code | uppercase }}</span>
                 </button>
               }
@@ -177,19 +174,20 @@ import { AppSearchBoxComponent } from '../../shared/components/app-search-box/ap
       .lang-switcher {
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 4px;
         background: rgba(255, 255, 255, 0.08);
-        padding: 3px 6px;
+        padding: 2px 4px;
         border-radius: $radius-sm;
 
         .lang-btn {
-          display: flex;
+          display: inline-flex;
           align-items: center;
           gap: 6px;
           padding: 3px 8px;
           border-radius: $radius-xs;
-          font-size: 0.75rem;
+          font-size: 0.6875rem;
           font-weight: 700;
+          letter-spacing: 0.03em;
           color: $gray-300;
           background: transparent;
           border: 1px solid transparent;
@@ -204,27 +202,23 @@ import { AppSearchBoxComponent } from '../../shared/components/app-search-box/ap
           &.active {
             color: #ffffff;
             background: $primary-600;
+            border-color: rgba(255, 255, 255, 0.2);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
           }
 
           .flag-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 18px;
-            height: 18px;
-
-            .flag-emoji {
-              width: 18px;
-              height: 18px;
-              display: block;
-              border-radius: 3px;
-              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-            }
+            width: 17px;
+            height: 12px;
+            border-radius: 2px;
+            display: inline-block;
+            vertical-align: middle;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            flex-shrink: 0;
           }
 
           .code {
-            letter-spacing: 0.5px;
+            line-height: 1;
           }
         }
       }
