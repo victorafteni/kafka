@@ -4,6 +4,7 @@ import { TrackingService } from './tracking.service';
 import { AnalyticsRepository } from '../repositories/analytics.repository';
 import { MockAnalyticsRepository } from '../repositories/mock-analytics.repository';
 import { AuthService } from '../auth/auth.service';
+import { provideHttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 
 describe('TrackingService', () => {
@@ -13,6 +14,7 @@ describe('TrackingService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
+        provideHttpClient(),
         TrackingService,
         { provide: AnalyticsRepository, useClass: MockAnalyticsRepository },
         AuthService
