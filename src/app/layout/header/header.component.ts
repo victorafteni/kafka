@@ -6,12 +6,11 @@ import { AuthService } from '../../core/auth/auth.service';
 import { TranslationService, SupportedLang } from '../../core/i18n/translation.service';
 import { TranslatePipe } from '../../core/i18n/translate.pipe';
 import { AppSearchBoxComponent } from '../../shared/components/app-search-box/app-search-box.component';
-import { AppFlagComponent } from '../../shared/components/app-flag/app-flag.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule, AppSearchBoxComponent, TranslatePipe, AppFlagComponent],
+  imports: [CommonModule, RouterModule, AppSearchBoxComponent, TranslatePipe],
   template: `
     <header class="app-header">
       <div class="top-banner">
@@ -35,7 +34,7 @@ import { AppFlagComponent } from '../../shared/components/app-flag/app-flag.comp
                   (click)="setLanguage(lang.code)"
                   [title]="lang.label"
                 >
-                  <app-flag [lang]="lang.code"></app-flag>
+                  <span class="flag">{{ lang.flag }}</span>
                   <span class="code">{{ lang.code | uppercase }}</span>
                 </button>
               }
@@ -167,17 +166,15 @@ import { AppFlagComponent } from '../../shared/components/app-flag/app-flag.comp
         border-radius: $radius-sm;
 
         .lang-btn {
-          display: inline-flex;
+          display: flex;
           align-items: center;
-          gap: 6px;
-          padding: 3px 8px;
+          gap: 4px;
+          padding: 2px 6px;
           border-radius: $radius-xs;
           font-size: 0.6875rem;
-          font-weight: 700;
-          letter-spacing: 0.03em;
-          color: $gray-300;
+          font-weight: 600;
+          color: $gray-400;
           background: transparent;
-          border: 1px solid transparent;
           cursor: pointer;
           transition: $transition-fast;
 
@@ -189,12 +186,11 @@ import { AppFlagComponent } from '../../shared/components/app-flag/app-flag.comp
           &.active {
             color: #ffffff;
             background: $primary-600;
-            border-color: rgba(255, 255, 255, 0.2);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
           }
 
-          .code {
-            line-height: 1;
+          .flag {
+            font-size: 0.8125rem;
           }
         }
       }

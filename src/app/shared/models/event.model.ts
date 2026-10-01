@@ -1,4 +1,5 @@
 export type AppEventType =
+  | 'PAGE_VIEW'
   | 'PRODUCT_VIEWED'
   | 'PRODUCT_SEARCHED'
   | 'CART_ITEM_ADDED'
@@ -55,5 +56,19 @@ export interface OrderCreatedPayload {
   userId: string;
   total: number;
   itemCount: number;
+}
+
+export interface PageViewPayload {
+  url: string;
+  path: string;
+  title: string;
+  referrer: string;
+  sessionId: string;
+  userId?: string;
+  userAgent?: string;
+  language: string;
+  screenResolution?: string;
+  timestamp: string;
+  queryParams?: Record<string, string>;
 }
 

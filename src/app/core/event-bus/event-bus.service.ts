@@ -40,6 +40,8 @@ export class EventBusService {
 
   private mapEventToKafkaTopic(type: AppEventType): string {
     switch (type) {
+      case 'PAGE_VIEW':
+        return 'page_views';
       case 'PRODUCT_VIEWED':
       case 'PRODUCT_SEARCHED':
         return 'commerce.catalog.events';
