@@ -12,8 +12,6 @@ import { CartRepository } from './core/repositories/cart.repository';
 import { MockCartRepository } from './core/repositories/mock-cart.repository';
 import { SearchRepository } from './core/repositories/search.repository';
 import { MockSearchRepository } from './core/repositories/mock-search.repository';
-import { AnalyticsRepository } from './core/repositories/analytics.repository';
-import { MockAnalyticsRepository } from './core/repositories/mock-analytics.repository';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,8 +22,7 @@ export const appConfig: ApplicationConfig = {
     // Clean Architecture Dependency Inversion tokens:
     { provide: ProductRepository, useClass: MockProductRepository },
     { provide: CartRepository, useClass: MockCartRepository },
-    { provide: SearchRepository, useClass: MockSearchRepository },
-    { provide: AnalyticsRepository, useClass: MockAnalyticsRepository }
+    { provide: SearchRepository, useClass: MockSearchRepository }
   ]
 };
 
