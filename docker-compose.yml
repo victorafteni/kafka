@@ -24,6 +24,25 @@ services:
     networks:
       - commerce-net
 
+  # 3. Node.js Express + Redis Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: commerce-backend
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      KAFKA_BROKER: kafka:29092
+    depends_on:
+      - redis
+      - kafka
+    networks:
+      - commerce-net
+
   # 3. Zookeeper for Kafka Cluster coordination
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0

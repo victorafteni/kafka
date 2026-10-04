@@ -4,6 +4,7 @@ import { Observable, map, delay, shareReplay, of, catchError } from 'rxjs';
 import { ProductRepository } from './product.repository';
 import { Product, ProductQueryOptions, PagedResult } from '../../shared/models/product.model';
 import { Category } from '../../shared/models/category.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,12 @@ export class MockProductRepository extends ProductRepository {
 
   private loadProducts(): Observable<Product[]> {
     if (!this.productsCache$) {
-      this.productsCache$ = this.http.get<Product[]>('/mock/products.json').pipe(
-        catchError(() => of([])),
+      const url = `${environment.apiUrl}/products`;
+      this.productsCache$ = this.http.get<Product[]>(url).pipe(
+        catchError(err => {
+          console.warn(`[PRODUCT REPO] Backend API error (${err.message}), using local mock fallback.`);
+          return this.http.get<Product[]>('/mock/products.json').pipe(catchError(() => of([])));
+        }),
         shareReplay(1)
       );
     }
@@ -25,8 +30,12 @@ export class MockProductRepository extends ProductRepository {
 
   private loadCategories(): Observable<Category[]> {
     if (!this.categoriesCache$) {
-      this.categoriesCache$ = this.http.get<Category[]>('/mock/categories.json').pipe(
-        catchError(() => of([])),
+      const url = `${environment.apiUrl}/categories`;
+      this.categoriesCache$ = this.http.get<Category[]>(url).pipe(
+        catchError(err => {
+          console.warn(`[PRODUCT REPO] Backend API error (${err.message}), using local mock fallback.`);
+          return this.http.get<Category[]>('/mock/categories.json').pipe(catchError(() => of([])));
+        }),
         shareReplay(1)
       );
     }
@@ -34,7 +43,7 @@ export class MockProductRepository extends ProductRepository {
   }
 
   override getCategories(): Observable<Category[]> {
-    return this.loadCategories().pipe(delay(100));
+    return this.loadCategories().pipe(delay(50));
   }
 
   override getProducts(options: ProductQueryOptions = {}): Observable<PagedResult<Product>> {

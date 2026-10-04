@@ -1,0 +1,60 @@
+Despre rol
+Căutăm un inginer Frontend cu înaltă calificare care să se alăture echipei noastre de inginerie
+și să contribuie la dezvoltarea următoarei generații de aplicații web centrate pe utilizator.
+
+În acest rol, vei coordona arhitectura frontend, concentrându-te pe crearea unei aplicații de tip single-page (SPA) performante și fluide, folosind Angular.
+
+Vei lucra într-un ecosistem complex care îmbină microservicii moderne cu sisteme legacy robuste,
+asigurând utilizatorilor o experiență de cumpărare intuitivă și extrem de rapidă.
+
+Este o oportunitate ideală pentru un profesionist motivat,
+care apreciază colaborarea și găsește satisfacție în rezolvarea unor provocări tehnice complexe,
+acoperind întregul stack tehnologic frontend modern.
+
+Responsabilități
+
+Coordonarea dezvoltării și mentenanței
+unor aplicații web scalabile
+și de înaltă calitate, utilizând Angular.
+
+Integrarea componentelor frontend cu arhitecturi bazate pe evenimente (event-driven),
+folosind Apache Kafka și scheme Avro pentru a asigura consistența datelor.
+
+Optimizarea performanței aplicației prin utilizarea Redis
+pentru caching-ul sesiunilor și al coșului de cumpărături.
+
+Implementarea și rafinarea funcționalităților de căutare
+(inclusiv filtrare pe fațete și sugestii automate) folosind Algolia.
+
+Colaborarea cu echipele de backend pentru preluarea datelor atât din microservicii moderne PostgreSQL,
+cât și din cataloage Oracle legacy, prin intermediul Kafka Connect (CDC).
+
+Menținerea unui flux CI/CD riguros, gestionând aplicații containerizate (Docker)
+din etapa de dezvoltare până la cea de deployment, folosind Jenkins și Ansible.
+
+Participarea la revizuirea codului (peer code reviews)
+și contribuția la o strategie de branching inspirată de GitFlow,
+pentru a garanta calitatea codului și integritatea arhitecturală.
+
+Calificări necesare
+
+- Expertiză solidă în dezvoltarea de aplicații SPA complexe folosind framework-ul Angular.
+- Înțelegere aprofundată a arhitecturilor bazate pe evenimente (event-driven),
+  în special în ceea ce privește lucrul cu Apache Kafka și Schema Registry.
+- Competență în integrarea soluțiilor de căutare, precum Algolia, în fluxurile de lucru frontend.
+- Experiență în utilizarea instrumentelor de containerizare (inclusiv Docker)
+  și a platformelor de orchestrare a containerelor.
+- Înțelegere solidă a bazelor de date relaționale,
+  inclusiv experiență în interogarea PostgreSQL și Oracle.
+- Expertiză în utilizarea sistemelor de control al versiunilor (Git/GitLab)
+  și familiaritate cu fluxurile de lucru bazate pe PR-uri și cu metodologia GitFlow.
+- Capacitate demonstrată de a lucra cu instrumente CI/CD (precum Jenkins sau GitLab CI)
+  și cu soluții de automatizare a deployment-ului, cum ar fi Ansible.
+
+  Cerințe adăugate de persoană care a publicat anunțul de job
+
+• Peste 1 ani de experiență de lucru cu JavaScript
+
+• Peste 1 ani de experiență de lucru cu Relational Databases
+
+• Peste 1 ani de experiență de lucru cu AngularJS

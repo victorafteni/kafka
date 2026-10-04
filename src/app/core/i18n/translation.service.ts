@@ -17,8 +17,8 @@ export class TranslationService {
   private readonly STORAGE_KEY = 'commerce_hub_lang';
 
   readonly languages: LanguageOption[] = [
-    { code: 'ro', label: 'Română', flag: '🇷🇴' },
-    { code: 'en', label: 'English', flag: '🇬🇧' }
+    { code: 'ro', label: 'Română', flag: `🇷🇴` },
+    { code: 'en', label: 'English', flag: `🇬🇧` }
   ];
 
   readonly currentLang = signal<SupportedLang>(this.getInitialLang());

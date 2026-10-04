@@ -28,13 +28,13 @@ import { AppSearchBoxComponent } from '../../shared/components/app-search-box/ap
             <div class="lang-switcher">
               @for (lang of translationService.languages; track lang.code) {
                 <button
+                 *ngIf="lang"
                   type="button"
                   class="lang-btn"
                   [class.active]="currentLang() === lang.code"
                   (click)="setLanguage(lang.code)"
                   [title]="lang.label"
                 >
-                  <span class="flag">{{ lang.flag }}</span>
                   <span class="code">{{ lang.code | uppercase }}</span>
                 </button>
               }
@@ -107,6 +107,12 @@ import { AppSearchBoxComponent } from '../../shared/components/app-search-box/ap
   styles: [`
     @use 'styles/variables' as *;
     @use 'styles/mixins' as *;
+
+
+    button.lang-btn span.flag.em {
+
+
+    }
 
     .app-header {
       position: sticky;

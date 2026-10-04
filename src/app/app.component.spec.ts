@@ -1,19 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { AnalyticsRepository } from './core/repositories/analytics.repository';
-import { MockAnalyticsRepository } from './core/repositories/mock-analytics.repository';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
-      providers: [
-        provideRouter([]),
-        provideHttpClient(),
-        { provide: AnalyticsRepository, useClass: MockAnalyticsRepository }
-      ]
+      providers: [provideRouter([])]
     }).compileComponents();
   });
 

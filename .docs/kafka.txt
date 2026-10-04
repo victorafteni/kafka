@@ -1,0 +1,11 @@
+
+Deschide aplicația Docker Desktop → secțiunea Containers.
+Vei vedea grupul de containere active: commerce-kafka, commerce-zookeeper și commerce-kafka-ui.
+
+În Browser (Kafka UI Dashboard):
+
+Deschide adresa: http://localhost:8085
+Ai acces direct la interfața grafică unde poți vedea:
+Clusterul activ: commerce-hub-cluster
+Topicul deja creat: page_views (3 partiții, replicare 1)
+Mesajele publicate, offset-urile și consumer group-urile active.

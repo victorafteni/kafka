@@ -1,0 +1,63 @@
+Pentru a porni backend-ul Node.js + Express, ai următoarele variante simple (din terminalul deschis în proiect):
+
+Varianta 1: Din rădăcina proiectului (Cea mai simplă)
+
+Rulează direct din folderul principal:
+
+powershell
+
+npm run backend
+
+(sau npm run backend:dev dacă vrei reîncărcare automată la modificări de fișiere).
+
+(sau node backend/src/server.js)
+
+Varianta 2: Cu Auto-Reload la orice modificare de cod (Development)
+
+Dacă modifici fișiere în backend și vrei ca serverul să se reîncarce automat:
+
+powershell
+node --watch backend/src/server.js
+Varianta 3: Din folderul backend/
+powershell
+cd backend
+npm start
+
+(sau npm run dev pentru modul cu auto-reload)
+
+Ce vei vedea în terminal la pornire:
+text
+========================================================
+       COMMERCE HUB - NODE.JS EXPRESS + REDIS API        
+========================================================
+[REDIS] Connecting to localhost:6379...
+[REDIS] Connection ready and established.
+[STARTUP] Redis client connected at localhost:6379
+[CATALOG] Checking catalog initialization state in Redis...
+[CATALOG] Redis key "shop:catalog:products" already exists. Reading from Redis cache.
+[CATALOG] Redis key "shop:catalog:categories" already exists. Reading from Redis cache.
+[CATALOG] Catalog ready: 10 products (redis), 5 categories (redis).
+[KAFKA] Connecting to broker at localhost:9092...
+[KAFKA] Producer connected successfully.
+[KAFKA] Consumer subscribed to topic "page_views".
+[STARTUP] Express Server running at http://localhost:3000
+[STARTUP] Catalog endpoint: http://localhost:3000/api/catalog
+[STARTUP] Health endpoint:  http://localhost:3000/api/health
+========================================================
+💡 Verificare rapidă dacă rulează:
+
+Deschide în browser sau testează în PowerShell:
+
+http://localhost:3000/api/health
+ 
+→
+→ afișează {"status":"ok","redis":"connected"}.
+http://localhost:3000/api/catalog
+ 
+→
+→ returnează produsele și categoriile direct din Redis.
+
+Notă: Dacă primești eroarea EADDRINUSE: address already in use :::3000, înseamnă că serverul rulează deja pe portul 3000. Poți opri procesul anterior cu:
+
+powershell
+Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force

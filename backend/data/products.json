@@ -1,0 +1,284 @@
+[
+  {
+    "id": "prod-101",
+    "sku": "LEN-TP-X1-G11",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 11",
+    "description": "Ultralight business laptop powered by 13th Gen Intel Core i7, 14-inch 2.8K OLED display, and military-grade durability.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
+    "brand": "Lenovo",
+    "price": 1499.00,
+    "originalPrice": 1699.00,
+    "currency": "EUR",
+    "stock": 14,
+    "rating": 4.8,
+    "reviewCount": 128,
+    "images": [
+      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Processor", "value": "Intel Core i7-1365U" },
+      { "name": "RAM", "value": "32 GB" },
+      { "name": "Storage", "value": "1 TB SSD" },
+      { "name": "Screen Size", "value": "14 inch OLED" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-03-01T12:00:00Z"
+  },
+  {
+    "id": "prod-102",
+    "sku": "DEL-XPS-15-9530",
+    "name": "Dell XPS 15 9530",
+    "description": "High performance creator laptop with NVIDIA GeForce RTX 4060, Intel Core i9, and InfinityEdge 3.5K OLED touchscreen.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
+    "brand": "Dell",
+    "price": 2199.00,
+    "originalPrice": 2399.00,
+    "currency": "EUR",
+    "stock": 8,
+    "rating": 4.7,
+    "reviewCount": 94,
+    "images": [
+      "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Processor", "value": "Intel Core i9-13900H" },
+      { "name": "RAM", "value": "32 GB" },
+      { "name": "Storage", "value": "1 TB SSD" },
+      { "name": "Graphics", "value": "RTX 4060 8GB" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2024-01-20T11:00:00Z",
+    "updatedAt": "2024-02-14T09:30:00Z"
+  },
+  {
+    "id": "prod-103",
+    "sku": "APP-MBP-14-M3",
+    "name": "Apple MacBook Pro 14 (M3 Pro)",
+    "description": "Groundbreaking Apple silicon M3 Pro with 18-core GPU, Liquid Retina XDR display, and up to 18 hours of battery life.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
+    "brand": "Apple",
+    "price": 2499.00,
+    "currency": "EUR",
+    "stock": 19,
+    "rating": 4.9,
+    "reviewCount": 215,
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Processor", "value": "Apple M3 Pro (12-core)" },
+      { "name": "RAM", "value": "18 GB Unified" },
+      { "name": "Storage", "value": "512 GB SSD" },
+      { "name": "Screen Size", "value": "14.2 inch Liquid Retina XDR" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2023-11-10T08:00:00Z",
+    "updatedAt": "2024-03-05T14:15:00Z"
+  },
+  {
+    "id": "prod-104",
+    "sku": "HP-PB-450-G10",
+    "name": "HP ProBook 450 G10",
+    "description": "Essential commercial performance with Intel Core i5, long-lasting battery, and HP Wolf Security for Business.",
+    "categoryId": "cat-laptops",
+    "categoryName": "Laptops & Computers",
+    "brand": "HP",
+    "price": 849.00,
+    "originalPrice": 929.00,
+    "currency": "EUR",
+    "stock": 25,
+    "rating": 4.3,
+    "reviewCount": 47,
+    "images": [
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Processor", "value": "Intel Core i5-1335U" },
+      { "name": "RAM", "value": "16 GB" },
+      { "name": "Storage", "value": "512 GB SSD" }
+    ],
+    "featured": false,
+    "popular": true,
+    "createdAt": "2024-01-05T09:00:00Z",
+    "updatedAt": "2024-02-18T16:00:00Z"
+  },
+  {
+    "id": "prod-201",
+    "sku": "APP-IPH-15-PRO",
+    "name": "Apple iPhone 15 Pro Max 256GB",
+    "description": "Forged in aerospace-grade titanium, with revolutionary A17 Pro chip, customizable Action button, and 5x Telephoto camera.",
+    "categoryId": "cat-phones",
+    "categoryName": "Smartphones & Tablets",
+    "brand": "Apple",
+    "price": 1399.00,
+    "currency": "EUR",
+    "stock": 22,
+    "rating": 4.9,
+    "reviewCount": 340,
+    "images": [
+      "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Display", "value": "6.7 inch Super Retina XDR" },
+      { "name": "Storage", "value": "256 GB" },
+      { "name": "Camera", "value": "48MP Main + 12MP Ultra-Wide + 12MP 5x Telephoto" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2023-09-22T08:00:00Z",
+    "updatedAt": "2024-03-02T10:00:00Z"
+  },
+  {
+    "id": "prod-202",
+    "sku": "SAM-S24-ULTRA",
+    "name": "Samsung Galaxy S24 Ultra 512GB",
+    "description": "Welcome to the era of mobile AI with Galaxy AI, titanium frame, 200MP camera system, and built-in S Pen.",
+    "categoryId": "cat-phones",
+    "categoryName": "Smartphones & Tablets",
+    "brand": "Samsung",
+    "price": 1449.00,
+    "originalPrice": 1569.00,
+    "currency": "EUR",
+    "stock": 16,
+    "rating": 4.8,
+    "reviewCount": 182,
+    "images": [
+      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Display", "value": "6.8 inch QHD+ Dynamic AMOLED 2X" },
+      { "name": "RAM", "value": "12 GB" },
+      { "name": "Storage", "value": "512 GB" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2024-01-30T10:00:00Z",
+    "updatedAt": "2024-03-01T15:00:00Z"
+  },
+  {
+    "id": "prod-301",
+    "sku": "SNY-WH-1000XM5",
+    "name": "Sony WH-1000XM5 Wireless Noise-Canceling Headphones",
+    "description": "Industry-leading noise cancelation with two processors and eight microphones, exceptional sound quality with LDAC.",
+    "categoryId": "cat-audio",
+    "categoryName": "Audio & Headphones",
+    "brand": "Sony",
+    "price": 349.00,
+    "originalPrice": 399.00,
+    "currency": "EUR",
+    "stock": 31,
+    "rating": 4.7,
+    "reviewCount": 420,
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Battery Life", "value": "30 Hours" },
+      { "name": "Noise Cancellation", "value": "Active Noise Canceling (ANC)" },
+      { "name": "Connectivity", "value": "Bluetooth 5.2 / 3.5mm" }
+    ],
+    "featured": true,
+    "popular": true,
+    "createdAt": "2023-08-14T09:00:00Z",
+    "updatedAt": "2024-02-20T11:00:00Z"
+  },
+  {
+    "id": "prod-302",
+    "sku": "APP-AIR-PODS-MAX",
+    "name": "Apple AirPods Max — Space Gray",
+    "description": "High-fidelity audio with computational sound, active noise cancellation with Transparency mode, and knit-mesh canopy.",
+    "categoryId": "cat-audio",
+    "categoryName": "Audio & Headphones",
+    "brand": "Apple",
+    "price": 579.00,
+    "currency": "EUR",
+    "stock": 9,
+    "rating": 4.6,
+    "reviewCount": 160,
+    "images": [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Chip", "value": "Dual Apple H1 Headphone Chip" },
+      { "name": "Battery Life", "value": "20 Hours" }
+    ],
+    "featured": false,
+    "popular": true,
+    "createdAt": "2023-07-10T12:00:00Z",
+    "updatedAt": "2024-01-18T10:00:00Z"
+  },
+  {
+    "id": "prod-401",
+    "sku": "LG-OLED-65-C3",
+    "name": "LG OLED evo C3 65-Inch 4K Smart TV",
+    "description": "Self-lit OLED pixels with α9 AI Processor Gen6, 120Hz refresh rate, Dolby Vision IQ & Dolby Atmos, perfect for gaming and movies.",
+    "categoryId": "cat-tv",
+    "categoryName": "TV & Home Cinema",
+    "brand": "LG",
+    "price": 1699.00,
+    "originalPrice": 1999.00,
+    "currency": "EUR",
+    "stock": 5,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "images": [
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Screen Size", "value": "65 Inch" },
+      { "name": "Resolution", "value": "4K Ultra HD (3840 x 2160)" },
+      { "name": "Refresh Rate", "value": "120Hz VRR" }
+    ],
+    "featured": true,
+    "popular": false,
+    "createdAt": "2023-10-01T10:00:00Z",
+    "updatedAt": "2024-02-12T14:00:00Z"
+  },
+  {
+    "id": "prod-501",
+    "sku": "DEL-MON-U2723QE",
+    "name": "Dell UltraSharp 27 4K USB-C Hub Monitor (U2723QE)",
+    "description": "Brilliant 4K monitor featuring IPS Black technology with 2000:1 contrast ratio and comprehensive connectivity hub with 90W power delivery.",
+    "categoryId": "cat-accessories",
+    "categoryName": "Accessories & Peripherals",
+    "brand": "Dell",
+    "price": 589.00,
+    "currency": "EUR",
+    "stock": 18,
+    "rating": 4.8,
+    "reviewCount": 115,
+    "images": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&auto=format&fit=crop&q=80",
+    "attributes": [
+      { "name": "Panel Type", "value": "IPS Black" },
+      { "name": "Resolution", "value": "3840 x 2160 at 60Hz" },
+      { "name": "Power Delivery", "value": "90W USB-C" }
+    ],
+    "featured": false,
+    "popular": true,
+    "createdAt": "2023-11-20T11:00:00Z",
+    "updatedAt": "2024-01-25T09:00:00Z"
+  }
+]
+

@@ -1,0 +1,21 @@
+Un interviu pentru poziția de Frontend Engineer / Developer cu specializare în Angular la R Systems România (fostă Computaris) este structurat, în general, în două sau trei etape principale. Candidații descriu procesul ca fiind relativ rapid și cu o atmosferă prietenoasă.
+Procesul standard de recrutare și subiectele tehnice la care trebuie să te aștepți decurg astfel:
+1. Discuția inițială cu HR-ul (Screening)
+• Format: Apel telefonic sau pe Teams/Zoom (aproximativ 30 de minute).
+• Ce se urmărește: Evaluarea experienței tale anterioare menționate în CV, verificarea disponibilității, a așteptărilor salariale și o scurtă discuție în limba engleză pentru a-ți evalua nivelul de conversație (proiectele sunt de obicei internaționale).
+2. Interviul Tehnic (Deep Dive & Live Coding)
+• Format: Apel video online.
+• Cum decurge: Este o discuție liberă bazată pe concepte teoretice combinate, uneori, cu o mică probă practică de tip live coding sau code review. Întrebările tehnice sunt bine structurate.
+Subiecte frecvente de Angular și Frontend:
+• Angular Lifecycle Hooks: Trebuie să știi în detaliu când și de ce se folosesc directive precum ngOnInit, ngOnChanges, ngOnDestroy etc.
+• Gestionarea Stării și RxJS: Operatori frecvenți (ex: switchMap vs mergeMap), utilizarea de Observables și bune practici pentru evitarea memory leak-urilor (de exemplu, unsubscribe-ul în ngOnDestroy sau utilizarea async pipe).
+• Performanță Angular: Mecanismul de Change Detection și optimizarea lui prin strategia OnPush.
+• Core Web Concepts: Concepte solide de TypeScript și JavaScript ES6+, stilizare modernă (SCSS/CSS3), utilizarea Directivelor și a Componentelor Modulare.
+• Arhitectură și Securitate: Integrarea de API-uri RESTful și concepte de autentificare (OAuth/JWT).
+• Îmbunătățirea UI/UX: Cum optimizezi o aplicație când API-urile încarcă datele greu sau cum optimizezi un ecran care are un lag vizibil din cauza logicii defectuoase.
+3. Interviul Managerial / Discuția Finală (opțional sau comasată)
+• În anumite campanii de recrutare (cum ar fi campaniile lor de tip "Fast Track"), R Systems grupează interviul tehnic și cel managerial într-o singură întâlnire complexă. Aici accentul se pune pe potrivirea cu echipa (cultural fit), metodologiile de lucru folosite în trecut (Agile/Scrum) și detalii despre proiectul specific pe care urmează să fii alocat.
+Sfaturi pentru a reuși:
+1. Pregătește camera și microfonul: Compania pune accent pe interacțiunea video deschisă la interviurile online pentru a mima o discuție față în față.
+2. Revizuiește versiunile recente de Angular: Pe proiectele lor actuale se caută adesea experiență cu versiuni moderne (Angular 16+).
+3. Fii pregătit să explici de ce, nu doar cum: Intervievatorii apreciază când explici logica din spatele unei decizii de arhitectură (de exemplu, de ce ai alege un anumit pattern de design în detrimentul altuia).

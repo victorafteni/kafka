@@ -1,0 +1,84 @@
+Poți vedea și inspecta Redis-ul în mai multe moduri:
+
+Varianta 1: Direct din Terminal / PowerShell (Cel mai rapid)
+
+Deoarece Redis rulează ca un container Docker, te poți conecta direct la consola lui internă (redis-cli):
+
+powershell
+docker exec -it merge-redis redis-cli
+
+După ce intri în consolă (127.0.0.1:6379>), poți rula următoarele comenzi:
+
+Vezi toate cheile stocate în Redis:
+
+redis
+keys *
+
+Răspuns:
+
+text
+1) "shop:catalog:products"
+2) "shop:catalog:categories"
+
+Vezi conținutul produselor salvate în Redis:
+
+redis
+get shop:catalog:products
+
+Vezi conținutul categoriilor:
+
+redis
+get shop:catalog:categories
+
+Verifică numărul total de chei și statistici de memorie:
+
+redis
+dbsize
+info memory
+
+Ieșire din consolă:
+
+redis
+exit
+
+(Alternativ, poți rula direct o comandă fără să intri în mod interactiv):
+
+powershell
+docker exec merge-redis redis-cli keys "*"
+Varianta 2: În interfața vizuală Docker Desktop
+Deschide aplicația Docker Desktop pe Windows.
+Mergi în meniul din stânga la Containers.
+Caută containerul merge-redis (rulează pe portul 6379).
+Dă click pe el:
+În tab-ul Logs: vezi logurile de conectare de la Express/Backend.
+În tab-ul Exec: ai un terminal grafic direct în container — tastează redis-cli și apasă Enter pentru a interoga baza de date.
+Varianta 3: Prin Backend API (în Browser)
+
+Poți verifica starea și confirmarea că datele vin din Redis direct în browser:
+
+Health Check Redis: 👉 http://localhost:3000/api/health
+
+json
+{
+  "status": "ok",
+  "redis": "connected"
+}
+
+Catalog din Redis: 👉 http://localhost:3000/api/catalog
+ La finalul răspunsului JSON vei vedea metadatele:
+
+json
+"_meta": {
+  "productsSource": "redis",
+  "categoriesSource": "redis"
+}
+Varianta 4: Cu o aplicație grafică (GUI)
+
+Dacă vrei o interfață vizuală completă cu tabele, grafice și navigare arborescentă prin chei:
+
+Poți instala gratuit Redis Insight
+ (interfața oficială de la Redis) și te conectezi simplu la:
+Host: localhost
+Port: 6379
+Sau poți folosi extensia Redis direct în VS Code (instalează extensia Database Client sau Redis din VS Code Extensions).
+1:04 PM

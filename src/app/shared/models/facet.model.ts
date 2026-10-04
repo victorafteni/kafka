@@ -18,6 +18,11 @@ export interface SearchSuggestion {
   category?: string;
   productCount?: number;
   type: 'product' | 'category' | 'popular';
+  id?: string;
+  targetUrl?: string;
+  brand?: string;
+  price?: number;
+  image?: string;
 }
 
 export interface SearchResult<T> {
