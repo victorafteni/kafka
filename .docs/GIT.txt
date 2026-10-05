@@ -45,7 +45,7 @@ git branch -d feature/nume-task – Ștergi ramura locală care nu mai este nece
 
 
 
-==
+==================================================
 
 
 For each feature to be developed create a branch starting from the master branch (git checkout –b feature/JIRA_PROJECT_NAME-TASK_ID). For e.g.: git checkout –b feature/PROACT-10.
@@ -54,17 +54,29 @@ Whenever you are ready to commit these changes, run the git status command to ch
 From the list of changed files choose the ones you want to commit. Run git add file_name command to add each file/folder that you want to add to the commit.
 When all files are added, run the git commit –m “JIRA_PROJECT_NAME-TASK_ID commit message” command. Sample command: git commit –m “PROACT-10 added new entity and created service in order to access the given data”
 Send the changes to remote:
-                                                     i.     If this is the first push, run the command git push origin –set-upstream feature/JIRA_PROJECT_NAME-TASK_ID (for e.g. : git push origin –set-upstream feature/PROACT-10)
+i.     If this is the first push, run the command
+      git push origin –set-upstream feature/JIRA_PROJECT_NAME-TASK_ID (for e.g. : git push origin –set-upstream feature/PROACT-10)
 
-                                                   ii.     If this is not the first push, run the command git push
+ii.    If this is not the first push, run the command git push
 
-Create a Bitbucket pull request to merge the feature branch into the master branch (http://86.120.120.41:8001/projects/PROACT/repos/back-end-gestiune/pull-requests top right corner).
-Solve/discuss all the review comments. Make changes on the feature branch and then push the changes remote (repeat step 1.e.ii )
+Create a Bitbucket pull request to merge the feature branch into the master branch
+(http://86.120.120.41:8001/projects/PROACT/repos/back-end-gestiune/pull-requests top right corner).
+
+Solve/discuss all the review comments. Make changes on the feature branch
+and then push the changes remote (repeat step 1.e.ii )
+
 After the request is approved by 2 more colleagues do the following:
+
 Squash the commits in the feature branch (git rebase -i HEAD~n, where n is the number of commits on feature branch – you can find the number of commits on this particular branch by running git log command and checking the number of commits)
+
 Update the master branch to have the latest changes (git checkout master + git pull)
+
 Rebase the feature branch to master (git rebase master on the feature branch)
+
 Fix conflicts locally (in case there are any files in conflict when doing "git rebase master" do the following: manually merge the files in conflict in Eclipse IDE, save the files in IDE, type in "git add "FILE_IN_CONFLICT_NAME" " for each file which was in conflict and the run the "git rebase --continue" command. In case the merge did not go as planned and you need to start over after the above step c) you can run "git rebase --abort" and start over. DO NOT run "git rebase --skip" as this will only move the code from master branch into your feature branch and you will loose all the work on the feature branch. If "git rebase --skip" was run by mistake DO NOT push the changes. Instead delete the local feature branch and then checkout from remote again).
+
 Push changes (force push to remote branch) (git push origin +branch_name for e.g. git push origin +feature/PROACT-10)
+
 Merge feature branch into master branch from Bitbucket pull request
+
 Delete the local feature branch using the command git branch –D feature/JIRA_PROJECT_NAME-TASK_ID (for e.g. git branch –D feature/PROACT-10)master
