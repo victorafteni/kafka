@@ -18,11 +18,6 @@ class KafkaService {
       createPartitioner: Partitioners.DefaultPartitioner
     });
 
-    this.consumer = this.kafka.consumer({
-      groupId: config.kafka.consumerGroup
-    });
-
-    this.consumedEvents = [];
     this.isConnected = false;
   }
 
@@ -31,47 +26,18 @@ class KafkaService {
       console.log(`[KAFKA] Connecting to broker at ${config.kafka.broker}...`);
       await this.producer.connect();
       console.log('[KAFKA] Producer connected successfully.');
-
-      await this.consumer.connect();
-      await this.consumer.subscribe({
-        topic: config.kafka.topicPageViews,
-        fromBeginning: false
-      });
-      console.log(`[KAFKA] Consumer subscribed to topic "${config.kafka.topicPageViews}".`);
-
-      this.consumer.run({
-        eachMessage: async ({ topic, partition, message }) => {
-          const rawValue = message.value ? message.value.toString() : '{}';
-          let parsedPayload = {};
-          try {
-            parsedPayload = JSON.parse(rawValue);
-          } catch {
-            parsedPayload = { raw: rawValue };
-          }
-
-          const consumedRecord = {
-            topic,
-            partition,
-            offset: message.offset,
-            key: message.key ? message.key.toString() : 'anonymous',
-            timestamp: Number(message.timestamp),
-            payload: parsedPayload,
-            consumedAt: Date.now()
-          };
-
-          this.consumedEvents.unshift(consumedRecord);
-          if (this.consumedEvents.length > 100) this.consumedEvents.pop();
-
-          console.log(
-            `[KAFKA CONSUMER] Consumed offset #${message.offset} from partition ${partition} | Path: ${parsedPayload.path || '/'}`
-          );
-        }
-      });
-
       this.isConnected = true;
     } catch (err) {
       console.warn('[KAFKA] Broker connection warning:', err.message);
       this.isConnected = false;
+    }
+  }
+
+  async disconnect() {
+    try {
+      await this.producer.disconnect();
+    } catch (err) {
+      // ignore
     }
   }
 

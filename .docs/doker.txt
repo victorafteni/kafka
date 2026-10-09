@@ -1,7 +1,6 @@
 docker exec merge-redis redis-cli keys "*"
 
 docker exec merge-redis redis-cli get "shop:catalog:products"
-docker exec merge-redis redis-cli get "shop:analytics:history"
 docker exec merge-redis redis-cli get "shop:catalog:categories"
 docker exec merge-redis redis-cli get "shop:catalog:search_index"
 docker exec merge-redis redis-cli get "shop:cart:usr-001"
@@ -617,6 +616,8 @@ Deschide aplicația Docker Desktop → secțiunea Containers.
 Vei vedea grupul de containere active: commerce-kafka, commerce-zookeeper și commerce-kafka-ui.
 
 În Browser (Kafka UI Dashboard):
+
+docker run -d -p 8080:8080 -e KAFKA_CLUSTERS_0_NAME=local -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=host.docker.internal:9092 provectuslabs/kafka-ui:latest
 
 Deschide adresa: http://localhost:8085
 Ai acces direct la interfața grafică unde poți vedea:

@@ -26,7 +26,7 @@ class AnalyticsConsumer {
       await this.consumer.connect();
       await this.consumer.subscribe({
         topic: config.kafka.topicPageViews,
-        fromBeginning: false
+        fromBeginning: true
       });
 
       console.log(`[Kafka] Consumer started (Group: ${config.kafka.consumerGroup}, Topic: ${config.kafka.topicPageViews})`);
@@ -97,15 +97,36 @@ class AnalyticsConsumer {
   }
 
   handleEvent(event, partition, offset) {
+    const payload = event.payload || {};
+    const path = payload.path || event.path || '/';
+    const route = payload.route || event.route || (path.replace(/^\//, '') || 'home');
+    const title = payload.title || event.title || 'Commerce Hub';
+    const sessionId = event.session_id || payload.sessionId || 'anonymous';
+    const anonymousId = event.anonymous_id || payload.anonymousId || null;
+    const userId = event.user_id || payload.userId || null;
+
     const record = {
-      event_id: event.event_id,
-      event_type: event.event_type,
+      event_id: event.event_id || `ev-${Date.now()}`,
+      event_type: event.event_type || 'PAGE_VIEW',
       topic: config.kafka.topicPageViews,
-      partition,
+      partition: Number(partition),
       offset: Number(offset),
-      key: event.session_id || event.anonymous_id || 'anonymous',
+      key: sessionId,
+      session_id: sessionId,
+      anonymous_id: anonymousId,
+      user_id: userId,
+      path,
+      route,
+      title,
       timestamp: event.timestamp || new Date().toISOString(),
-      payload: event.payload || {},
+      payload: {
+        path,
+        route,
+        title,
+        session_id: sessionId,
+        referrer: payload.referrer || event.referrer || '/',
+        ...payload
+      },
       consumedAt: Date.now()
     };
 
@@ -113,6 +134,45 @@ class AnalyticsConsumer {
     if (this.consumedEvents.length > this.maxBufferedEvents) {
       this.consumedEvents.pop();
     }
+  }
+
+  getStats() {
+    const total = this.consumedEvents.length;
+    const sessionSet = new Set();
+    const routeCounts = {};
+    const partitionsSet = new Set();
+
+    for (const ev of this.consumedEvents) {
+      if (ev.session_id && ev.session_id !== 'anonymous') {
+        sessionSet.add(ev.session_id);
+      } else if (ev.key) {
+        sessionSet.add(ev.key);
+      }
+      if (ev.partition !== undefined) partitionsSet.add(ev.partition);
+      const r = ev.route || ev.path || 'home';
+      routeCounts[r] = (routeCounts[r] || 0) + 1;
+    }
+
+    let topRoute = 'home';
+    let topRouteCount = 0;
+    for (const [r, count] of Object.entries(routeCounts)) {
+      if (count > topRouteCount) {
+        topRoute = r;
+        topRouteCount = count;
+      }
+    }
+
+    return {
+      totalViews: total,
+      uniqueSessions: sessionSet.size || (total > 0 ? 1 : 0),
+      topRoute: total > 0 ? topRoute : 'None',
+      topRouteCount,
+      activeBrokers: 1,
+      activePartitions: partitionsSet.size || 3,
+      routeDistribution: routeCounts,
+      latestTimestamp: this.consumedEvents[0]?.timestamp || null,
+      status: this.isRunning ? 'ONLINE' : 'OFFLINE'
+    };
   }
 
   async sendToDlq(dlqPayload) {

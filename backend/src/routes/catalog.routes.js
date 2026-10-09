@@ -32,11 +32,15 @@ router.post('/analytics/page-view', (req, res, next) => trackingController.track
 router.post('/analytics/track', (req, res, next) => trackingController.trackPageView(req, res, next));
 
 // Analytics Kafka Consumer feed (to view consumed events in UI/tests)
+const config = require('../config/config');
 router.get('/analytics/events', (req, res) => {
   const events = analyticsConsumer.getConsumedEvents();
+  const stats = analyticsConsumer.getStats();
   res.status(200).json({
-    topic: 'shop.analytics.page_views',
+    success: true,
+    topic: config.kafka.topicPageViews,
     totalConsumed: events.length,
+    stats,
     events
   });
 });
